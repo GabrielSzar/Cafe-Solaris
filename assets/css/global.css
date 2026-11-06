@@ -1,0 +1,75 @@
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/norwester@5.3.0/index.min.css");
+:root {
+    --text: #f2edd5;
+    --backgroud: #221212;
+    --primary: #735646;
+    --secondary: #d9d0c1;
+    --tertiary: #736b02;
+    --font: "lato", sans-serif;
+    --font-logo: "Norwester", sans-serif;
+}
+body.dark {
+    --text: #f2edd5;
+    --backgroud: #0d0d0d;
+    --primary: #735646;
+    --secondary: #d9d0c1;
+    --tertiary: #736b02;
+}
+* {
+    font-family: var(--font);
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    background-color: var(--backgroud);
+}
+a {
+    text-decoration: none;
+    font-family: var(--font);
+    color: var(--text);
+}
+p {
+    color: var(--secondary);
+}
+button {
+    border: 0px;
+    cursor: pointer;
+}
+/*Nav Section*/
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-height: 80px;
+    border-bottom: solid 1px var(--secondary);
+}
+nav > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    font-family: var(--font-logo);
+    font-size: 2rem;
+}
+.title {
+    color: var(--tertiary);
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+.logo {
+    background: url(../img/cafe-solaris-logo.png);
+    background-position: center;
+    background-size: contain;
+    width: 64px;
+    height: 64px;
+}
+.nav-link {
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+.subtitle {
+    color: var(--primary);
+}
