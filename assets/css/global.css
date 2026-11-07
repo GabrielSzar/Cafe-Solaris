@@ -1,7 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/@fontsource/norwester@5.3.0/index.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 :root {
     --text: #f2edd5;
-    --backgroud: #221212;
+    --background: #221212;
     --primary: #735646;
     --secondary: #d9d0c1;
     --tertiary: #736b02;
@@ -10,10 +11,13 @@
 }
 body.dark {
     --text: #f2edd5;
-    --backgroud: #0d0d0d;
+    --background: #0d0d0d;
     --primary: #735646;
     --secondary: #d9d0c1;
     --tertiary: #736b02;
+}
+html {
+    scroll-behavior: smooth;
 }
 * {
     font-family: var(--font);
@@ -21,7 +25,7 @@ body.dark {
     margin: 0;
 }
 body {
-    background-color: var(--backgroud);
+    background-color: var(--background);
 }
 a {
     text-decoration: none;
@@ -32,8 +36,12 @@ p {
     color: var(--secondary);
 }
 button {
+    outline: none;
     border: 0px;
     cursor: pointer;
+}
+.invert-color {
+    color: var(--background) !important;
 }
 /*Nav Section*/
 .header-nav {
@@ -49,13 +57,30 @@ nav > div {
     justify-content: space-between;
     align-items: center;
 }
-
+#nav-serch {
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;
+    border: solid 1px var(--text);
+    border-radius: 4px;
+    input {
+        background: none;
+        outline: none;
+        border: none;
+        color: var(--text);
+        margin-right: 0.3rem;
+    }
+}
+.nav-search-i {
+    font-size: 1.3rem;
+    color: var(--text);
+}
 .logo-title {
     font-family: var(--font-logo);
     font-size: 2rem;
 }
 .title {
-    color: var(--tertiary);
+    color: var(--text);
     text-transform: uppercase;
     font-size: 4rem;
 }
