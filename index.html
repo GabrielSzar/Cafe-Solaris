@@ -13,6 +13,49 @@
         <title>Café Solaris</title>
     </head>
     <body>
+        <dialog id="login-dialog">
+            <button command="close" commandfor="login-dialog" class="exit-btn">
+                <i class="fa-solid fa-x"></i>
+            </button>
+            <div id="login-dialog-header">
+                <div class="logo"></div>
+                <h2>Entrar na Café Solaris</h2>
+            </div>
+            <form action="" id="login-dialog-form">
+                <h3>Email</h3>
+                <input
+                    type="email"
+                    name="email_login"
+                    id="email_login"
+                    placeholder="seuEmail@exemplo.com"
+                    required
+                />
+                <h3>Senha</h3>
+                <input
+                    type="password"
+                    name="password_login"
+                    id="password_login"
+                    placeholder="••••••••"
+                    required
+                />
+                <button>Entrar</button>
+            </form>
+            <div id="other-login">
+                <h3>outras formas de entrar</h3>
+                <div class="login-method">
+                    <p>Entrar com o Google</p>
+                    <i class="fa-brands fa-google"></i>
+                </div>
+                <div class="login-method">
+                    <p>Entrat com a Apple</p>
+                    <i class="fa-brands fa-apple"></i>
+                </div>
+            </div>
+            <div id="singin-modal">
+                <p>Não tem conta?</p>
+                <a href="singin.html">Cadastre-se</a>
+            </div>
+        </dialog>
         <nav class="header-nav">
             <div>
                 <div class="logo"></div>
@@ -26,7 +69,13 @@
                     <input type="text" placeholder="Procure no menu" />
                     <i class="fa-solid fa-magnifying-glass nav-search-i"></i>
                 </div>
-                <a href="" class="nav-link">Log In</a>
+                <button
+                    command="show-modal"
+                    commandfor="login-dialog"
+                    class="nav-link nav-btn"
+                >
+                    Log In
+                </button>
                 <a href="" class="nav-link">Carrinho</a>
             </div>
         </nav>
@@ -70,8 +119,8 @@
                     Na porta da sua casa!
                 </h1>
                 <p class="lead">
-                    Grãos de outro mundo, preparo na hora e entrega em média em
-                    28 minutos. <br />
+                    Grãos de outro mundo, preparo na hora e entrega em média
+                    meia hora. <br />
                     Escolha no cardápio completo, com todos os produtos e
                     preços.
                 </p>
@@ -117,10 +166,10 @@
                                     <h1>R$ 14,90</h1>
                                 </div>
                                 <div>
-                                    <button class="btn-primary">
+                                    <div class="btn-primary">
                                         Ver Produto
                                         <i class="fa-solid fa-arrow-right"></i>
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -147,10 +196,10 @@
                                     <h1>R$ 14,90</h1>
                                 </div>
                                 <div>
-                                    <button class="btn-primary">
+                                    <div class="btn-primary">
                                         Ver Produto
                                         <i class="fa-solid fa-arrow-right"></i>
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -177,10 +226,10 @@
                                     <h1>R$ 14,90</h1>
                                 </div>
                                 <div>
-                                    <button class="btn-primary">
+                                    <div class="btn-primary">
                                         Ver Produto
                                         <i class="fa-solid fa-arrow-right"></i>
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -207,10 +256,10 @@
                                     <h1>R$ 14,90</h1>
                                 </div>
                                 <div>
-                                    <button class="btn-primary">
+                                    <div class="btn-primary">
                                         Ver Produto
                                         <i class="fa-solid fa-arrow-right"></i>
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -237,16 +286,15 @@
                                     <h1>R$ 14,90</h1>
                                 </div>
                                 <div>
-                                    <button class="btn-primary">
+                                    <div class="btn-primary">
                                         Ver Produto
                                         <i class="fa-solid fa-arrow-right"></i>
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </a>
-
                 <a href="">
                     <div class="product-card">
                         <img
@@ -268,10 +316,10 @@
                                     <h1>R$ 14,90</h1>
                                 </div>
                                 <div>
-                                    <button class="btn-primary">
+                                    <div class="btn-primary">
                                         Ver Produto
                                         <i class="fa-solid fa-arrow-right"></i>
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -295,8 +343,8 @@
                         </div>
                     </div>
                     <p>
-                        Monte seu pedido com os preços atualizados e confirme o
-                        endereço antes de pagar.
+                        Monte seu pedido e pague com crédito, débito ou pix, e
+                        parcele de até 3 vezes
                     </p>
                 </div>
                 <div class="how-works-item">
@@ -321,11 +369,20 @@
                         </div>
                     </div>
                     <p>
-                        Um entregador leva o pedido em embalagem térmica. Em
-                        média, 28 minutos até a sua porta.
+                        Entrega com media de meia hora e sem custos em pedidos
+                        acima de R$79,50
                     </p>
                 </div>
             </div>
+        </section>
+        <section class="CTA">
+            <h1 class="title">Agora é só pedir!</h1>
+            <p class="subtitle">
+                Seu próximo café já está no cardápio, aproveite e Black Friday
+            </p>
+            <button class="btn-primary btn-cta">
+                Ver Cardápio <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </section>
         <footer>
             <div class="logo footer-logo"></div>

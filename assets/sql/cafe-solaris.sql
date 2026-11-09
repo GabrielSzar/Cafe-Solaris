@@ -1,9 +1,11 @@
 
 CREATE TABLE clientes (
     id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) UNIQUE,
     numero_telefone VARCHAR(20),
     email VARCHAR(100) UNIQUE,
     cpf VARCHAR(14) UNIQUE,
+    senha VARCHAR(100)
     cep VARCHAR(10),
     bairro VARCHAR(100),
     rua VARCHAR(150),
