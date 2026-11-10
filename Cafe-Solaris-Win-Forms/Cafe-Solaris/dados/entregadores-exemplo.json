@@ -1,0 +1,42 @@
+[
+  {
+    "nome": "Marcos Pereira",
+    "numero_telefone": "(11) 98700-1001",
+    "cpf": "10010010011",
+    "rg": "1234567",
+    "cep": "11111-100",
+    "email": "marcos.pereira@teste.com"
+  },
+  {
+    "nome": "Juliana Costa",
+    "numero_telefone": "(11) 98700-1002",
+    "cpf": "10010010022",
+    "rg": "2345678",
+    "cep": "22222-200",
+    "email": "juliana.costa@teste.com"
+  },
+  {
+    "nome": "Rafael Alves",
+    "numero_telefone": "(11) 98700-1003",
+    "cpf": "10010010033",
+    "rg": "3456789",
+    "cep": "33333-300",
+    "email": "rafael.alves@teste.com"
+  },
+  {
+    "nome": "Patrícia Gomes",
+    "numero_telefone": "(11) 98700-1004",
+    "cpf": "10010010044",
+    "rg": "4567890",
+    "cep": "44444-400",
+    "email": "patricia.gomes@teste.com"
+  },
+  {
+    "nome": "Thiago Martins",
+    "numero_telefone": "(11) 98700-1005",
+    "cpf": "10010010055",
+    "rg": "5678901",
+    "cep": "55555-500",
+    "email": "thiago.martins@teste.com"
+  }
+]

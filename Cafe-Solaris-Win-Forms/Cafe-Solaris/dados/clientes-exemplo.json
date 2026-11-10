@@ -1,0 +1,62 @@
+[
+  {
+    "nome": "Ana Souza",
+    "numero_telefone": "(11) 98765-4321",
+    "email": "ana.souza@teste.com",
+    "cpf": "11122233344",
+    "cep": "12345-678",
+    "bairro": "Centro",
+    "rua": "Rua das Flores",
+    "numero": "120",
+    "complemento_endereco": "Apto 301",
+    "senha": "senha123"
+  },
+  {
+    "nome": "Bruno Lima",
+    "numero_telefone": "(11) 98765-4322",
+    "email": "bruno.lima@teste.com",
+    "cpf": "22233344455",
+    "cep": "23456-789",
+    "bairro": "Jardim Botânico",
+    "rua": "Rua do Sol",
+    "numero": "45",
+    "complemento_endereco": "Casa",
+    "senha": "senha456"
+  },
+  {
+    "nome": "Carla Mendes",
+    "numero_telefone": "(11) 98765-4323",
+    "email": "carla.mendes@teste.com",
+    "cpf": "33344455566",
+    "cep": "34567-890",
+    "bairro": "Vila Nova",
+    "rua": "Travessa das Palmeiras",
+    "numero": "8",
+    "complemento_endereco": "",
+    "senha": "senha789"
+  },
+  {
+    "nome": "Diego Rocha",
+    "numero_telefone": "(11) 98765-4324",
+    "email": "diego.rocha@teste.com",
+    "cpf": "44455566677",
+    "cep": "45678-901",
+    "bairro": "Bela Vista",
+    "rua": "Avenida Central",
+    "numero": "1500",
+    "complemento_endereco": "Bloco B",
+    "senha": "senha321"
+  },
+  {
+    "nome": "Elisa Freitas",
+    "numero_telefone": "(11) 98765-4325",
+    "email": "elisa.freitas@teste.com",
+    "cpf": "55566677788",
+    "cep": "56789-012",
+    "bairro": "Centro",
+    "rua": "Rua Azul",
+    "numero": "78",
+    "complemento_endereco": "",
+    "senha": "senha654"
+  }
+]

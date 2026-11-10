@@ -1,0 +1,47 @@
+[
+  {
+    "cliente_id": 2,
+    "entregador_id": 2,
+    "data_pedido": "2026-11-09 09:15:00",
+    "status": "Entregue",
+    "observacoes": "Sem açúcar no café",
+    "forma_pagamento": "Pix",
+    "taxa_entrega": 5.00
+  },
+  {
+    "cliente_id": 3,
+    "entregador_id": 3,
+    "data_pedido": "2026-11-09 10:40:00",
+    "status": "Em rota",
+    "observacoes": "Entregar na portaria",
+    "forma_pagamento": "Cartão de crédito",
+    "taxa_entrega": 6.50
+  },
+  {
+    "cliente_id": 4,
+    "entregador_id": 4,
+    "data_pedido": "2026-11-09 12:05:00",
+    "status": "Recebido",
+    "observacoes": "",
+    "forma_pagamento": "Dinheiro",
+    "taxa_entrega": 5.00
+  },
+  {
+    "cliente_id": 5,
+    "entregador_id": 5,
+    "data_pedido": "2026-11-09 15:30:00",
+    "status": "Preparando",
+    "observacoes": "Leite vegetal",
+    "forma_pagamento": "Pix",
+    "taxa_entrega": 4.00
+  },
+  {
+    "cliente_id": 6,
+    "entregador_id": null,
+    "data_pedido": "2026-11-09 18:20:00",
+    "status": "Recebido",
+    "observacoes": "Retirar no balcão",
+    "forma_pagamento": "Cartão de débito",
+    "taxa_entrega": null
+  }
+]

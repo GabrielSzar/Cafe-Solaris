@@ -1,0 +1,32 @@
+[
+  {
+    "nome": "Caffè Latte",
+    "descricao": "Espresso com leite vaporizado e uma fina camada de espuma.",
+    "categoria": "Bebidas quentes",
+    "preco": 16.90
+  },
+  {
+    "nome": "Cappuccino",
+    "descricao": "Espresso com leite vaporizado e espuma densa.",
+    "categoria": "Bebidas quentes",
+    "preco": 15.50
+  },
+  {
+    "nome": "Frappuccino Caramel",
+    "descricao": "Bebida gelada com café, leite, calda de caramelo e chantilly.",
+    "categoria": "Bebidas geladas",
+    "preco": 24.90
+  },
+  {
+    "nome": "Chai Tea Latte",
+    "descricao": "Chá preto com especiarias e leite vaporizado.",
+    "categoria": "Chás",
+    "preco": 17.20
+  },
+  {
+    "nome": "Croissant de Amêndoas",
+    "descricao": "Croissant folhado recheado com creme de amêndoas.",
+    "categoria": "Alimentos",
+    "preco": 14.80
+  }
+]

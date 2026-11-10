@@ -1,0 +1,32 @@
+[
+  {
+    "pedido_id": 2,
+    "produto_id": 2,
+    "qtd": 2,
+    "preco_unitario": 16.90
+  },
+  {
+    "pedido_id": 2,
+    "produto_id": 5,
+    "qtd": 1,
+    "preco_unitario": 17.20
+  },
+  {
+    "pedido_id": 3,
+    "produto_id": 4,
+    "qtd": 1,
+    "preco_unitario": 24.90
+  },
+  {
+    "pedido_id": 4,
+    "produto_id": 6,
+    "qtd": 2,
+    "preco_unitario": 14.80
+  },
+  {
+    "pedido_id": 6,
+    "produto_id": 3,
+    "qtd": 1,
+    "preco_unitario": 15.50
+  }
+]
