@@ -13,72 +13,8 @@
         <title>Café Solaris</title>
     </head>
     <body>
-        <dialog id="login-dialog">
-            <button command="close" commandfor="login-dialog" class="exit-btn">
-                <i class="fa-solid fa-x"></i>
-            </button>
-            <div id="login-dialog-header">
-                <div class="logo"></div>
-                <h2>Entrar na Café Solaris</h2>
-            </div>
-            <form action="" id="login-dialog-form">
-                <h3>Email</h3>
-                <input
-                    type="email"
-                    name="email_login"
-                    id="email_login"
-                    placeholder="seuEmail@exemplo.com"
-                    required
-                />
-                <h3>Senha</h3>
-                <input
-                    type="password"
-                    name="password_login"
-                    id="password_login"
-                    placeholder="••••••••"
-                    required
-                />
-                <button>Entrar</button>
-            </form>
-            <div id="other-login">
-                <h3>outras formas de entrar</h3>
-                <div class="login-method">
-                    <p>Entrar com o Google</p>
-                    <i class="fa-brands fa-google"></i>
-                </div>
-                <div class="login-method">
-                    <p>Entrat com a Apple</p>
-                    <i class="fa-brands fa-apple"></i>
-                </div>
-            </div>
-            <div id="singin-modal">
-                <p>Não tem conta?</p>
-                <a href="singin.html">Cadastre-se</a>
-            </div>
-        </dialog>
-        <nav class="header-nav">
-            <div id="left-header-nav">
-                <div class="logo"></div>
-                <a href="menu.html" class="nav-link">Menu</a>
-            </div>
-            <div id="center-header-nav">
-                <a href="" class="logo-title">Cafe Solaris</a>
-            </div>
-            <div id="right-header-nav">
-                <div id="nav-serch">
-                    <input type="text" placeholder="Procure no menu" />
-                    <i class="fa-solid fa-magnifying-glass nav-search-i"></i>
-                </div>
-                <button
-                    command="show-modal"
-                    commandfor="login-dialog"
-                    class="nav-link nav-btn"
-                >
-                    Log In
-                </button>
-                <a href="" class="nav-link">Carrinho</a>
-            </div>
-        </nav>
+
+        <div id="nav-container"></div>
         <section class="banner"></section>
         <section class="strip">
             <div class="trust">
@@ -384,17 +320,7 @@
                 Ver Cardápio <i class="fa-solid fa-arrow-right"></i>
             </button>
         </section>
-        <footer>
-            <div class="logo footer-logo"></div>
-            <nav class="footer-nav">
-                <a href="">Cardápio</a>
-                <a href="">Produtos</a>
-                <a href="">Como funciona</a>
-                <a href="">Dúvidas</a>
-                <a href=""> Termos de uso</a>
-                <a href="">Política de privacidade</a>
-            </nav>
-            <p>© 2026 Café Solaris Delivery. Todos os direitos reservados.</p>
-        </footer>
+        <div id="footer-container"></>
+        <script src="assets/javascript/components.js"></script>
     </body>
 </html>

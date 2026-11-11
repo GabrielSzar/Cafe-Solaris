@@ -13,72 +13,7 @@
         <title>Café Solaris</title>
     </head>
     <body>
-        <dialog id="login-dialog">
-            <button command="close" commandfor="login-dialog" class="exit-btn">
-                <i class="fa-solid fa-x"></i>
-            </button>
-            <div id="login-dialog-header">
-                <div class="logo"></div>
-                <h2>Entrar na Café Solaris</h2>
-            </div>
-            <form action="" id="login-dialog-form">
-                <h3>Email</h3>
-                <input
-                    type="email"
-                    name="email_login"
-                    id="email_login"
-                    placeholder="seuEmail@exemplo.com"
-                    required
-                />
-                <h3>Senha</h3>
-                <input
-                    type="password"
-                    name="password_login"
-                    id="password_login"
-                    placeholder="••••••••"
-                    required
-                />
-                <button>Entrar</button>
-            </form>
-            <div id="other-login">
-                <h3>outras formas de entrar</h3>
-                <div class="login-method">
-                    <p>Entrar com o Google</p>
-                    <i class="fa-brands fa-google"></i>
-                </div>
-                <div class="login-method">
-                    <p>Entrat com a Apple</p>
-                    <i class="fa-brands fa-apple"></i>
-                </div>
-            </div>
-            <div id="singin-modal">
-                <p>Não tem conta?</p>
-                <a href="singin.html">Cadastre-se</a>
-            </div>
-        </dialog>
-        <nav class="header-nav">
-            <div>
-                <div class="logo"></div>
-                <a href="" class="nav-link">Menu</a>
-            </div>
-            <div>
-                <a href="" class="logo-title">Cafe Solaris</a>
-            </div>
-            <div>
-                <div id="nav-serch">
-                    <input type="text" placeholder="Procure no menu" />
-                    <i class="fa-solid fa-magnifying-glass nav-search-i"></i>
-                </div>
-                <button
-                    command="show-modal"
-                    commandfor="login-dialog"
-                    class="nav-link nav-btn"
-                >
-                    Log In
-                </button>
-                <a href="" class="nav-link">Carrinho</a>
-            </div>
-        </nav>
+        <div id="nav-container"></div>
         <section id="search">
             <h1 class="title">Menu</h1>
             <form action="" id="search-menu">
@@ -168,5 +103,7 @@
                 </div>
             </a>
         </section>
+        <div id="footer-container"></div>
+        <script src="assets/javascript/components.js"></script>
     </body>
 </html>
