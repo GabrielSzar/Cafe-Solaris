@@ -1,0 +1,443 @@
+[
+  {
+    "id": 1,
+    "nome": "20% OFF: Caramelo Macchiato",
+    "preco": 15.92,
+    "categoria": "Esquenta black friday",
+    "descricao": "Espresso com leite vaporizado, calda de baunilha e finalização com caramelo."
+  },
+  {
+    "id": 2,
+    "nome": "20% OFF: Refresher de Frutas Vermelhas com Limonada",
+    "preco": 15.12,
+    "categoria": "Esquenta black friday",
+    "descricao": "Refresher de frutas vermelhas com limonada, refrescante e servido gelado."
+  },
+  {
+    "id": 3,
+    "nome": "20% OFF: Caramelo Frappuccino - Base Café",
+    "preco": 18.32,
+    "categoria": "Esquenta black friday",
+    "descricao": "Bebida gelada batida com café e calda de caramelo, de textura cremosa."
+  },
+  {
+    "id": 4,
+    "nome": "20% OFF: Muffin de Blueberry",
+    "preco": 11.92,
+    "categoria": "Esquenta black friday",
+    "descricao": "Muffin macio com pedaços de blueberry."
+  },
+  {
+    "id": 5,
+    "nome": "20% OFF: Cinnamon Roll",
+    "preco": 12.72,
+    "categoria": "Esquenta black friday",
+    "descricao": "Pão doce enrolado com recheio de canela e cobertura cremosa."
+  },
+  {
+    "id": 6,
+    "nome": "20% OFF: Croissant de Presunto e Queijo",
+    "preco": 12.72,
+    "categoria": "Esquenta black friday",
+    "descricao": "Croissant folhado recheado com presunto e queijo derretido."
+  },
+  {
+    "id": 7,
+    "nome": "40% OFF: Bolo de Limão",
+    "preco": 8.94,
+    "categoria": "Esquenta black friday",
+    "descricao": "Bolo fofinho de limão, com sabor cítrico e refrescante."
+  },
+  {
+    "id": 8,
+    "nome": "40% OFF: Cookie de Baunilha",
+    "preco": 8.34,
+    "categoria": "Esquenta black friday",
+    "descricao": "Cookie macio com sabor suave de baunilha."
+  },
+  {
+    "id": 9,
+    "nome": "Caramelo Macchiato",
+    "preco": 20.9,
+    "categoria": "Bebidas quentes",
+    "descricao": "Espresso com leite vaporizado, calda de baunilha e finalizado com caramelo."
+  },
+  {
+    "id": 10,
+    "nome": "Café Latte",
+    "preco": 17.9,
+    "categoria": "Bebidas quentes",
+    "descricao": "Espresso suave com leite vaporizado e uma fina camada de espuma."
+  },
+  {
+    "id": 11,
+    "nome": "Café Mocha",
+    "preco": 21.9,
+    "categoria": "Bebidas quentes",
+    "descricao": "Espresso com chocolate e leite vaporizado, finalizado com chantilly."
+  },
+  {
+    "id": 12,
+    "nome": "Café Mocha Branco",
+    "preco": 21.9,
+    "categoria": "Bebidas quentes",
+    "descricao": "Espresso com chocolate branco e leite vaporizado, doce e cremoso."
+  },
+  {
+    "id": 13,
+    "nome": "Chocolate Quente",
+    "preco": 18.9,
+    "categoria": "Bebidas quentes",
+    "descricao": "Chocolate quente cremoso, preparado com leite vaporizado."
+  },
+  {
+    "id": 14,
+    "nome": "Doce de Leite Latte",
+    "preco": 21.9,
+    "categoria": "Bebidas quentes",
+    "descricao": "Espresso com leite vaporizado e calda de doce de leite."
+  },
+  {
+    "id": 15,
+    "nome": "Brigadeiro Latte",
+    "preco": 21.9,
+    "categoria": "Bebidas quentes",
+    "descricao": "Espresso com leite vaporizado e sabor de brigadeiro."
+  },
+  {
+    "id": 16,
+    "nome": "Baunilha Latte",
+    "preco": 21.9,
+    "categoria": "Bebidas quentes",
+    "descricao": "Espresso com leite vaporizado e calda de baunilha."
+  },
+  {
+    "id": 17,
+    "nome": "Flat White",
+    "preco": 17.9,
+    "categoria": "Bebidas quentes",
+    "descricao": "Espresso duplo com leite vaporizado e microespuma aveludada."
+  },
+  {
+    "id": 18,
+    "nome": "Avelã Latte",
+    "preco": 21.91,
+    "categoria": "Bebidas quentes",
+    "descricao": "Espresso com leite vaporizado e sabor de avelã."
+  },
+  {
+    "id": 19,
+    "nome": "Chocolate Branco Quente",
+    "preco": 18.9,
+    "categoria": "Bebidas quentes",
+    "descricao": "Chocolate branco quente, doce e cremoso, com leite vaporizado."
+  },
+  {
+    "id": 20,
+    "nome": "Chocolate Gelado",
+    "preco": 18.9,
+    "categoria": "Bebidas geladas",
+    "descricao": "Chocolate gelado cremoso, servido com gelo."
+  },
+  {
+    "id": 21,
+    "nome": "Caramelo Macchiato Gelado",
+    "preco": 20.9,
+    "categoria": "Bebidas geladas",
+    "descricao": "Espresso com leite gelado, calda de baunilha e finalização com caramelo."
+  },
+  {
+    "id": 22,
+    "nome": "Baunilha Latte Gelado",
+    "preco": 21.9,
+    "categoria": "Bebidas geladas",
+    "descricao": "Espresso com leite gelado e calda de baunilha, servido com gelo."
+  },
+  {
+    "id": 23,
+    "nome": "Café Mocha Gelado",
+    "preco": 21.9,
+    "categoria": "Bebidas geladas",
+    "descricao": "Espresso com chocolate e leite gelado, servido com gelo."
+  },
+  {
+    "id": 24,
+    "nome": "Doce de Leite Latte Gelado",
+    "preco": 21.91,
+    "categoria": "Bebidas geladas",
+    "descricao": "Espresso com leite gelado e calda de doce de leite, servido com gelo."
+  },
+  {
+    "id": 25,
+    "nome": "Café Mocha Branco Gelado",
+    "preco": 21.91,
+    "categoria": "Bebidas geladas",
+    "descricao": "Espresso com chocolate branco e leite gelado, servido com gelo."
+  },
+  {
+    "id": 26,
+    "nome": "Shaken Espresso Gelado - Double Shot",
+    "preco": 21.9,
+    "categoria": "Bebidas geladas",
+    "descricao": "Espresso duplo batido com gelo e xarope, de textura leve e refrescante."
+  },
+  {
+    "id": 27,
+    "nome": "Chocolate Branco Gelado",
+    "preco": 18.9,
+    "categoria": "Bebidas geladas",
+    "descricao": "Chocolate branco gelado, doce e cremoso, servido com gelo."
+  },
+  {
+    "id": 28,
+    "nome": "Café Latte Gelado",
+    "preco": 17.9,
+    "categoria": "Bebidas geladas",
+    "descricao": "Espresso com leite gelado, servido com gelo."
+  },
+  {
+    "id": 29,
+    "nome": "Cold Brew Tradicional",
+    "preco": 16.9,
+    "categoria": "Bebidas geladas",
+    "descricao": "Café extraído a frio por muitas horas, de sabor suave e servido gelado."
+  },
+  {
+    "id": 30,
+    "nome": "Cold Brew Baunilha",
+    "preco": 19.9,
+    "categoria": "Bebidas geladas",
+    "descricao": "Cold brew com calda de baunilha, servido gelado."
+  },
+  {
+    "id": 31,
+    "nome": "Cold Brew com Leite",
+    "preco": 19.9,
+    "categoria": "Bebidas geladas",
+    "descricao": "Cold brew servido com leite, de sabor suave e cremoso."
+  },
+  {
+    "id": 32,
+    "nome": "Flat White Gelado",
+    "preco": 17.9,
+    "categoria": "Bebidas geladas",
+    "descricao": "Espresso duplo com leite gelado e microespuma, servido com gelo."
+  },
+  {
+    "id": 33,
+    "nome": "Brown Sugar Shaken Espresso Gelado",
+    "preco": 20.89,
+    "categoria": "Bebidas geladas",
+    "descricao": "Espresso batido com gelo e açúcar mascavo, de sabor doce e refrescante."
+  },
+  {
+    "id": 34,
+    "nome": "Avelã Shaken Espresso",
+    "preco": 20.89,
+    "categoria": "Bebidas geladas",
+    "descricao": "Espresso batido com gelo e sabor de avelã, levemente doce e refrescante."
+  },
+  {
+    "id": 35,
+    "nome": "Chocolate Shaken Espresso",
+    "preco": 20.89,
+    "categoria": "Bebidas geladas",
+    "descricao": "Espresso batido com gelo e sabor de chocolate, levemente doce e refrescante."
+  },
+  {
+    "id": 36,
+    "nome": "Cappuccino Tradicional Gelado",
+    "preco": 19.9,
+    "categoria": "Bebidas geladas",
+    "descricao": "Cappuccino gelado com espresso, leite e espuma, servido com gelo."
+  },
+  {
+    "id": 37,
+    "nome": "Cappuccino Tradicional",
+    "preco": 16.9,
+    "categoria": "Cappuccinos",
+    "descricao": "Espresso com leite vaporizado e espessa camada de espuma."
+  },
+  {
+    "id": 38,
+    "nome": "Cappuccino Doce de Leite",
+    "preco": 17.9,
+    "categoria": "Cappuccinos",
+    "descricao": "Cappuccino com calda de doce de leite e espuma cremosa."
+  },
+  {
+    "id": 39,
+    "nome": "Cappuccino Brigadeiro",
+    "preco": 18.9,
+    "categoria": "Cappuccinos",
+    "descricao": "Cappuccino com sabor de brigadeiro e espuma cremosa."
+  },
+  {
+    "id": 40,
+    "nome": "Cappuccino Chocolate",
+    "preco": 18.9,
+    "categoria": "Cappuccinos",
+    "descricao": "Cappuccino com chocolate e espuma cremosa."
+  },
+  {
+    "id": 41,
+    "nome": "Cappuccino Canela",
+    "preco": 18.9,
+    "categoria": "Cappuccinos",
+    "descricao": "Cappuccino com canela e espuma cremosa."
+  },
+  {
+    "id": 42,
+    "nome": "Bolo Red Velvet - Fatia",
+    "preco": 19.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Fatia de bolo red velvet macio, com cobertura cremosa."
+  },
+  {
+    "id": 43,
+    "nome": "Brownie Espresso",
+    "preco": 14.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Brownie de chocolate intenso com toque de café espresso."
+  },
+  {
+    "id": 44,
+    "nome": "Muffin de Blueberry",
+    "preco": 14.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Muffin macio com recheio de blueberry."
+  },
+  {
+    "id": 45,
+    "nome": "Muffin de Chocolate",
+    "preco": 15.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Muffin macio com pedaços de chocolate."
+  },
+  {
+    "id": 46,
+    "nome": "Ring Donuts - Chocolate",
+    "preco": 16.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Donut em formato de anel coberto com cobertura de chocolate."
+  },
+  {
+    "id": 47,
+    "nome": "Ring Donuts - Chocoberry",
+    "preco": 16.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Donut em formato de anel com cobertura de chocolate e frutas vermelhas."
+  },
+  {
+    "id": 48,
+    "nome": "Bolo de Chocolate - Fatia",
+    "preco": 19.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Fatia de bolo de chocolate macio e úmido."
+  },
+  {
+    "id": 49,
+    "nome": "Cookie de Baunilha",
+    "preco": 14.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Cookie macio com sabor suave de baunilha."
+  },
+  {
+    "id": 50,
+    "nome": "Bolo de Limão",
+    "preco": 14.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Bolo fofinho de limão, com sabor cítrico e refrescante."
+  },
+  {
+    "id": 51,
+    "nome": "CheeseCake de Frutas Vermelhas",
+    "preco": 19.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Cheesecake cremoso com cobertura de frutas vermelhas."
+  },
+  {
+    "id": 52,
+    "nome": "Cinnamon Roll",
+    "preco": 16.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Pão doce enrolado com recheio de canela e cobertura cremosa."
+  },
+  {
+    "id": 53,
+    "nome": "Pão de Mel",
+    "preco": 12.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Bolinho de mel e especiarias, de textura macia."
+  },
+  {
+    "id": 54,
+    "nome": "Bolo de Cenoura com Chocolate",
+    "preco": 14.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Bolo de cenoura macio coberto com calda de chocolate."
+  },
+  {
+    "id": 55,
+    "nome": "Bolo de Banana",
+    "preco": 14.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Bolo macio de banana, de sabor caseiro."
+  },
+  {
+    "id": 56,
+    "nome": "Barra de Chocolate",
+    "preco": 5.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Barra de chocolate para matar a vontade doce."
+  },
+  {
+    "id": 57,
+    "nome": "Sonho de Doce de Leite",
+    "preco": 15.9,
+    "categoria": "Doces & bolos",
+    "descricao": "Massa macia recheada com doce de leite."
+  },
+  {
+    "id": 58,
+    "nome": "Café Média",
+    "preco": 15.9,
+    "categoria": "Cafés",
+    "descricao": "Café com leite de sabor equilibrado, servido quente."
+  },
+  {
+    "id": 59,
+    "nome": "Café Pingado",
+    "preco": 15.9,
+    "categoria": "Cafés",
+    "descricao": "Espresso com um toque de leite vaporizado."
+  },
+  {
+    "id": 60,
+    "nome": "Café Americano",
+    "preco": 14.9,
+    "categoria": "Cafés",
+    "descricao": "Espresso diluído em água quente, de sabor suave."
+  },
+  {
+    "id": 61,
+    "nome": "Café Coado Gelado",
+    "preco": 10.9,
+    "categoria": "Cafés",
+    "descricao": "Café coado servido gelado, de sabor suave e refrescante."
+  },
+  {
+    "id": 62,
+    "nome": "Café Coado",
+    "preco": 10.9,
+    "categoria": "Cafés",
+    "descricao": "Café coado de sabor suave, servido quente."
+  },
+  {
+    "id": 63,
+    "nome": "Café Americano Gelado",
+    "preco": 14.9,
+    "categoria": "Cafés",
+    "descricao": "Espresso diluído em água e servido com gelo, de sabor leve e refrescante."
+  }
+]

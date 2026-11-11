@@ -1,0 +1,64 @@
+id_ou_slug,nome,arquivo,url,status
+001,20% OFF: Caramelo Macchiato,imagens/001.png,https://cdn-sbux-catalog-imagens.zamp.com.br/e26c3fb27f094d0fb36a692c502c918a.png,ok
+002,20% OFF: Refresher de Frutas Vermelhas com Limonada,imagens/002.png,https://cdn-sbux-catalog-imagens.zamp.com.br/638066c64be447deb23be2dd2cba86fd.png,ok
+003,20% OFF: Caramelo Frappuccino - Base Café,imagens/003.png,https://cdn-sbux-catalog-imagens.zamp.com.br/3a5aeff1c2924d7d9e37f1c6ab1d884c.png,ok
+004,20% OFF: Muffin de Blueberry,imagens/004.png,https://cdn-sbux-catalog-imagens.zamp.com.br/2f5140ec7e184be9b4720583f9df525b.png,ok
+005,20% OFF: Cinnamon Roll,imagens/005.png,https://cdn-sbux-catalog-imagens.zamp.com.br/713c12153df541ada1ef53319a4fcb30.png,ok
+006,20% OFF: Croissant de Presunto e Queijo,imagens/006.png,https://cdn-sbux-catalog-imagens.zamp.com.br/0a586cf5401c46d18f4423109b5eaf2b.png,ok
+007,40% OFF: Bolo de Limão,imagens/007.png,https://cdn-sbux-catalog-imagens.zamp.com.br/fc604ac682554f63bca506a8af0f5433.png,ok
+008,40% OFF: Cookie de Baunilha,imagens/008.png,https://cdn-sbux-catalog-imagens.zamp.com.br/a86820a8344a49cd953aa46a6634eaa7.png,ok
+009,Caramelo Macchiato,imagens/009.png,https://cdn-sbux-catalog-imagens.zamp.com.br/3948f5db3ba44cc7a9f9f3d5f0b6789a.png,ok
+010,Café Latte,imagens/010.png,https://cdn-sbux-catalog-imagens.zamp.com.br/d3db4b3fdabf4039ba2f6a81e03f91d5.png,ok
+011,Café Mocha,imagens/011.png,https://cdn-sbux-catalog-imagens.zamp.com.br/8ee3f46522574b24af795537884523ab.png,ok
+012,Café Mocha Branco,imagens/012.png,https://cdn-sbux-catalog-imagens.zamp.com.br/b698db8a78d84ce08f4c7cbeeb4402dc.png,ok
+013,Chocolate Quente,imagens/013.png,https://cdn-sbux-catalog-imagens.zamp.com.br/0399fbc73dde43089b455aff99b33c6f.png,ok
+014,Doce de Leite Latte,imagens/014.png,https://cdn-sbux-catalog-imagens.zamp.com.br/d0c6fc383547454e8c32af126ccbaf04.png,ok
+015,Brigadeiro Latte,imagens/015.png,https://cdn-sbux-catalog-imagens.zamp.com.br/60d6857ab5fa4879841b7f4428e0e414.png,ok
+016,Baunilha Latte,imagens/016.png,https://cdn-sbux-catalog-imagens.zamp.com.br/a07744df93b849d499c93478b3127b6d.png,ok
+017,Flat White,imagens/017.png,https://cdn-sbux-catalog-imagens.zamp.com.br/10aff80c465a423d9237f7365e6acdf1.png,ok
+018,Avelã Latte,imagens/018.png,https://cdn-sbux-catalog-imagens.zamp.com.br/b3cf8d51e79d4bf59ce5849efa2592de.png,ok
+019,Chocolate Branco Quente,imagens/019.png,https://cdn-sbux-catalog-imagens.zamp.com.br/7d96ef95335545e598dc25439198ca71.png,ok
+020,Chocolate Gelado,imagens/020.png,https://cdn-sbux-catalog-imagens.zamp.com.br/84918dabe9434b989268ba4e8be68cf1.png,ok
+021,Caramelo Macchiato Gelado,imagens/021.png,https://cdn-sbux-catalog-imagens.zamp.com.br/022cd3f2a4424336bf97c0f812fac884.png,ok
+022,Baunilha Latte Gelado,imagens/022.png,https://cdn-sbux-catalog-imagens.zamp.com.br/388f0bce97644ffc82df2cf78023e53c.png,ok
+023,Café Mocha Gelado,imagens/023.png,https://cdn-sbux-catalog-imagens.zamp.com.br/86f29b90bbcf49f28fd0eaf84baf81cf.png,ok
+024,Doce de Leite Latte Gelado,imagens/024.png,https://cdn-sbux-catalog-imagens.zamp.com.br/b74ab7f238954d8eadf45ef8dab1088b.png,ok
+025,Café Mocha Branco Gelado,imagens/025.png,https://cdn-sbux-catalog-imagens.zamp.com.br/4a653380f98345a685bb3798fcc364ba.png,ok
+026,Shaken Espresso Gelado - Double Shot,imagens/026.png,https://cdn-sbux-catalog-imagens.zamp.com.br/efc93360b33c4c46817986451462a4bd.png,ok
+027,Chocolate Branco Gelado,imagens/027.png,https://cdn-sbux-catalog-imagens.zamp.com.br/99fee22269f14b5882de646369b8d379.png,ok
+028,Café Latte Gelado,imagens/028.png,https://cdn-sbux-catalog-imagens.zamp.com.br/2e0223ec78304119961ea6f07ab46aa6.png,ok
+029,Cold Brew Tradicional,imagens/029.webp,https://cdn-sbux-catalog-imagens.zamp.com.br/2d79437373d846c7901d3cee10727dd2.webp,ok
+030,Cold Brew Baunilha,imagens/030.webp,https://cdn-sbux-catalog-imagens.zamp.com.br/145991b68fcc4c7f96415a15302ae4d4.webp,ok
+031,Cold Brew com Leite,imagens/031.webp,https://cdn-sbux-catalog-imagens.zamp.com.br/92de8bb8aa314cb397a87ac13e0af825.webp,ok
+032,Flat White Gelado,imagens/032.png,https://cdn-sbux-catalog-imagens.zamp.com.br/df8c2a59e2c1474cbac2725f27f6f570.png,ok
+033,Brown Sugar Shaken Espresso Gelado,imagens/033.png,https://cdn-sbux-catalog-imagens.zamp.com.br/0189aa1d8f0c4a34a8343e3f30f89221.png,ok
+034,Avelã Shaken Espresso,imagens/034.png,https://cdn-sbux-catalog-imagens.zamp.com.br/6a2d3a17c1c44df8a0c8b55066b597f6.png,ok
+035,Chocolate Shaken Espresso,imagens/035.png,https://cdn-sbux-catalog-imagens.zamp.com.br/b4aca9edcbff4cc899e037ba3bb0b0c7.png,ok
+036,Cappuccino Tradicional Gelado,imagens/036.webp,https://cdn-sbux-catalog-imagens.zamp.com.br/4c49b72edc254f81913b993087383023.webp,ok
+037,Cappuccino Tradicional,imagens/037.png,https://cdn-sbux-catalog-imagens.zamp.com.br/b3d84cf6a6214722a61eecab5cd1a4fe.png,ok
+038,Cappuccino Doce de Leite,imagens/038.png,https://cdn-sbux-catalog-imagens.zamp.com.br/cb6a3739130847e985f70aa44413e557.png,ok
+039,Cappuccino Brigadeiro,imagens/039.webp,https://cdn-sbux-catalog-imagens.zamp.com.br/2bf28b5cc87345c684086c80e3965fb2.webp,ok
+040,Cappuccino Chocolate,imagens/040.png,https://cdn-sbux-catalog-imagens.zamp.com.br/2da7d3b0bbf44a0bb9152c63261586f6.png,ok
+041,Cappuccino Canela,imagens/041.png,https://cdn-sbux-catalog-imagens.zamp.com.br/bdec2d929e494ea5a386726c8a9c962b.png,ok
+042,Bolo Red Velvet - Fatia,imagens/042.png,https://cdn-sbux-catalog-imagens.zamp.com.br/57327aa10b7b44d2ac8ec400e43e4aa3.png,ok
+043,Brownie Espresso,imagens/043.png,https://cdn-sbux-catalog-imagens.zamp.com.br/ee741884f8d54b428deb1335f940f085.png,ok
+044,Muffin de Blueberry,imagens/044.png,https://cdn-sbux-catalog-imagens.zamp.com.br/23ad6dbce55e445fbcf2c9a8376cdbc3.png,ok
+045,Muffin de Chocolate,imagens/045.png,https://cdn-sbux-catalog-imagens.zamp.com.br/8764a5dd435046148adcce7be8dff22b.png,ok
+046,Ring Donuts - Chocolate,imagens/046.png,https://cdn-sbux-catalog-imagens.zamp.com.br/4225468a3e314cf98c6437e632f5b2d3.png,ok
+047,Ring Donuts - Chocoberry,imagens/047.png,https://cdn-sbux-catalog-imagens.zamp.com.br/2061dbd6c96c47ca9d6cab64278329cc.png,ok
+048,Bolo de Chocolate - Fatia,imagens/048.png,https://cdn-sbux-catalog-imagens.zamp.com.br/1401370fa84b40ca871d8754117c1a07.png,ok
+049,Cookie de Baunilha,imagens/049.png,https://cdn-sbux-catalog-imagens.zamp.com.br/849b74023e2544a79c69be849f9ece9d.png,ok
+050,Bolo de Limão,imagens/050.png,https://cdn-sbux-catalog-imagens.zamp.com.br/6156b882d6434d76821744d4a3d60364.png,ok
+051,CheeseCake de Frutas Vermelhas,imagens/051.png,https://cdn-sbux-catalog-imagens.zamp.com.br/6ef1bdf1a00a47b385344d13c178ee13.png,ok
+052,Cinnamon Roll,imagens/052.png,https://cdn-sbux-catalog-imagens.zamp.com.br/12e00971aacb47edb3a68be9101a31dd.png,ok
+053,Pão de Mel,imagens/053.png,https://cdn-sbux-catalog-imagens.zamp.com.br/a9bad7f9629c42c4bd9b49c4c68ee952.png,ok
+054,Bolo de Cenoura com Chocolate,imagens/054.png,https://cdn-sbux-catalog-imagens.zamp.com.br/ba401bfaa1ee4296a30675aa076f1ad1.png,ok
+055,Bolo de Banana,imagens/055.png,https://cdn-sbux-catalog-imagens.zamp.com.br/0572eabdd1f141808530d745df709087.png,ok
+056,Barra de Chocolate,imagens/056.png,https://cdn-sbux-catalog-imagens.zamp.com.br/29ad76d47ca04fabbeb362dde0b60952.png,ok
+057,Sonho de Doce de Leite,imagens/057.png,https://cdn-sbux-catalog-imagens.zamp.com.br/b87ab53e191e41a6b30325ec685f32b4.png,ok
+058,Café Média,imagens/058.png,https://cdn-sbux-catalog-imagens.zamp.com.br/3d4afa8312a14bf4a54c24dd69f00f7e.png,ok
+059,Café Pingado,imagens/059.png,https://cdn-sbux-catalog-imagens.zamp.com.br/fcf97d30e8e942ed8c1528d125016d6a.png,ok
+060,Café Americano,imagens/060.png,https://cdn-sbux-catalog-imagens.zamp.com.br/926d55bf7c05493781dc9cfbe2e4187a.png,ok
+061,Café Coado Gelado,imagens/061.webp,https://cdn-sbux-catalog-imagens.zamp.com.br/36c63f423ebc48b49f6f28fc676fba65.webp,ok
+062,Café Coado,imagens/062.webp,https://cdn-sbux-catalog-imagens.zamp.com.br/75ff2e656dfb4f039c209273327c4a04.webp,ok
+063,Café Americano Gelado,imagens/063.webp,https://cdn-sbux-catalog-imagens.zamp.com.br/7ab0cc500ffc415996dc7c7758e7bc88.webp,ok
