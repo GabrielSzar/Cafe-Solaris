@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Café Solaris - Página de Usuário (usuario.css)
-   ========================================================================== */
-
-/* Seção Principal */
 .usuario-sec {
     display: flex;
     justify-content: center;
@@ -19,7 +14,6 @@
     gap: 2rem;
 }
 
-/* Cabeçalho da Página */
 .usuario-header {
     display: flex;
     justify-content: space-between;
@@ -65,24 +59,18 @@
     color: var(--tertiary);
 }
 
-/* Layout em Grid (Sidebar + Conteúdo Principal) */
 .usuario-grid {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 2rem;
     align-items: start;
 }
-
-/* ==========================================================================
-   Sidebar do Usuário
-   ========================================================================== */
 .usuario-sidebar {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-/* Card de Perfil Resumido */
 .user-profile-card {
     background-color: rgba(34, 18, 18, 0.85);
     border: 1px solid var(--primary);
@@ -129,7 +117,9 @@
     font-size: 0.85rem;
     border: 2px solid var(--background);
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
 }
 
 .user-avatar-badge:hover {
@@ -195,7 +185,6 @@
     font-weight: 600;
 }
 
-/* Menu de Navegação da Conta */
 .usuario-nav-box {
     background-color: rgba(34, 18, 18, 0.85);
     border: 1px solid var(--primary);
@@ -260,9 +249,6 @@
     color: #ff8a80;
 }
 
-/* ==========================================================================
-   Conteúdo Principal (Formulário e Seções)
-   ========================================================================== */
 .usuario-main-content {
     display: flex;
     flex-direction: column;
@@ -277,7 +263,6 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* Títulos de Seção dentro do Card */
 .form-section-title {
     display: flex;
     align-items: center;
@@ -319,7 +304,6 @@
     border-radius: 4px;
 }
 
-/* Grids do Formulário */
 .form-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -365,7 +349,10 @@
     padding: 0 1rem;
     font-size: 1rem;
     font-family: var(--font);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
 }
 
 .form-group input:focus {
@@ -379,7 +366,6 @@
     color: rgba(217, 208, 193, 0.45);
 }
 
-/* Campo Somente Leitura (ex: ID) */
 .form-group input.input-readonly,
 .form-group input:read-only {
     background-color: rgba(34, 18, 18, 0.45);
@@ -395,7 +381,6 @@
     margin-top: 0.2rem;
 }
 
-/* Barra de Ações do Formulário */
 .form-actions-bar {
     display: flex;
     align-items: center;
@@ -419,7 +404,10 @@
     align-items: center;
     gap: 0.6rem;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease,
+        box-shadow 0.2s ease;
 }
 
 .btn-submit:hover {
@@ -453,9 +441,6 @@
     border-color: var(--text);
 }
 
-/* ==========================================================================
-   Seção de Histórico de Pedidos (Conectado a dados de cafe-solaris.sql)
-   ========================================================================== */
 .orders-list {
     display: flex;
     flex-direction: column;
@@ -472,7 +457,9 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1.2rem;
-    transition: border-color 0.2s ease, background-color 0.2s ease;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
 }
 
 .order-item-card:hover {
@@ -559,7 +546,6 @@
     color: var(--text);
 }
 
-/* Alerta de Informação */
 .info-box {
     display: flex;
     align-items: flex-start;
@@ -583,9 +569,6 @@
     line-height: 1.4;
 }
 
-/* ==========================================================================
-   Responsividade
-   ========================================================================== */
 @media (max-width: 992px) {
     .usuario-grid {
         grid-template-columns: 1fr;
