@@ -10,470 +10,194 @@
             src="https://kit.fontawesome.com/f112726c5a.js"
             crossorigin="anonymous"
         ></script>
-        <title>Café Solaris - Informações do Usuário</title>
+        <title>Café Solaris - Área do Cliente</title>
     </head>
     <body>
         <div id="nav-container"></div>
+
         <main class="usuario-sec">
             <div class="usuario-container">
                 <header class="usuario-header">
                     <div class="usuario-header-title">
                         <span class="tag">Área do Cliente</span>
-                        <h1>Painel do Usuário</h1>
+                        <h1 class="usuario-title">Painel do Usuário</h1>
                         <p>
-                            Gerencie seus dados pessoais, endereço de entrega e
-                            preferências da conta Solaris
+                            Consulte seus dados pessoais, endereço de entrega e histórico de pedidos
                         </p>
-                    </div>
-                    <div class="usuario-header-badge">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span>Conta Verificada • ID #0001</span>
                     </div>
                 </header>
 
                 <div class="usuario-grid">
-                    <!-- Sidebar do Usuário -->
                     <aside class="usuario-sidebar">
-                        <div class="user-profile-card">
-                            <div class="user-avatar-wrapper">
+                        <div class="usuario-nav-box">
+                            <div class="user-profile-header">
                                 <div class="user-avatar">
                                     <i class="fa-solid fa-user"></i>
                                 </div>
-                                <button
-                                    type="button"
-                                    class="user-avatar-badge"
-                                    title="Alterar foto de perfil"
-                                >
-                                    <i class="fa-solid fa-camera"></i>
-                                </button>
+                                <h2 class="user-name">Tung Tung Sahur<h2>
+                                <p class="user-email">teste@gmail.com</p>
                             </div>
-                            <h2 class="user-name">Carlos Eduardo</h2>
-                            <p class="user-email">teste@gmail.com</p>
-                            <span class="user-role-tag">
-                                <i class="fa-solid fa-mug-hot"></i> Cliente VIP
-                            </span>
 
-                            <div class="user-meta-info">
-                                <div class="meta-row">
-                                    <span class="meta-label">
-                                        <i class="fa-solid fa-id-badge"></i> ID
-                                        do Cliente:
-                                    </span>
-                                    <span class="meta-value">#0001</span>
+                            <nav class="usuario-nav-menu" aria-label="Navegação da conta">
+                                <a href="#dados-pessoais" class="usuario-nav-item active">
+                                    <i class="fa-solid fa-id-card"></i>
+                                    <span>Dados Pessoais</span>
+                                </a>
+                                <a href="#endereco-entrega" class="usuario-nav-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Endereço de Entrega</span>
+                                </a>
+                                <a href="#historico-pedidos" class="usuario-nav-item">
+                                    <i class="fa-solid fa-clock-rotate-left"></i>
+                                    <span>Histórico de Pedidos</span>
+                                </a>
+                                <a href="index.html" class="usuario-nav-item logout-link">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    <span>Sair da Conta</span>
+                                </a>
+                            </nav>
+                        </div>
+                    </aside>
+
+                    <section class="usuario-main-content">
+                        <div class="usuario-card" id="dados-pessoais">
+                            <div class="card-section-title">
+                                <i class="fa-solid fa-id-card icon-title"></i>
+                                <div>
+                                    <h3>Dados Pessoais</h3>
+                                    <p>Informações de identificação da sua conta</p>
                                 </div>
-                                <div class="meta-row">
-                                    <span class="meta-label">
-                                        <i
-                                            class="fa-solid fa-calendar-check"
-                                        ></i>
-                                        Cadastrado em:
+                            </div>
+
+                            <div class="user-info-grid">
+                                <div class="user-info-item full-width">
+                                    <span class="user-info-label">
+                                        <i class="fa-solid fa-user"></i>
+                                        Nome Completo
                                     </span>
-                                    <span class="meta-value">Nov / 2026</span>
+                                    <span class="user-info-value">Tung Tung Sahur</span>
                                 </div>
-                                <div class="meta-row">
-                                    <span class="meta-label">
-                                        <i class="fa-solid fa-bag-shopping"></i>
-                                        Total Pedidos:
+
+                                <div class="user-info-item">
+                                    <span class="user-info-label">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        E-mail
                                     </span>
-                                    <span class="meta-value">1 concluído</span>
+                                    <span class="user-info-value">teste@gmail.com</span>
+                                </div>
+
+                                <div class="user-info-item">
+                                    <span class="user-info-label">
+                                        <i class="fa-solid fa-phone"></i>
+                                        Telefone / Celular
+                                    </span>
+                                    <span class="user-info-value">55 31 9 8821 2934</span>
+                                </div>
+
+                                <div class="user-info-item">
+                                    <span class="user-info-label">
+                                        <i class="fa-solid fa-address-card"></i>
+                                        CPF
+                                    </span>
+                                    <span class="user-info-value">127.394.725-30</span>
+                                </div>
+
+                                <div class="user-info-item">
+                                    <span class="user-info-label">
+                                        <i class="fa-solid fa-lock"></i>
+                                        Senha
+                                    </span>
+                                    <span class="user-info-value password-masked">••••••••</span>
                                 </div>
                             </div>
                         </div>
 
-                        <nav
-                            class="usuario-nav-box"
-                            aria-label="Navegação da conta"
-                        >
-                            <a
-                                href="#dados-pessoais"
-                                class="usuario-nav-item active"
-                            >
-                                <i class="fa-solid fa-id-card"></i>
-                                <span>Dados Pessoais</span>
-                            </a>
-                            <a
-                                href="#endereco-entrega"
-                                class="usuario-nav-item"
-                            >
-                                <i class="fa-solid fa-location-dot"></i>
-                                <span>Endereço de Entrega</span>
-                            </a>
-                            <a href="#seguranca-senha" class="usuario-nav-item">
-                                <i class="fa-solid fa-lock"></i>
-                                <span>Segurança e Senha</span>
-                            </a>
-                            <a
-                                href="#historico-pedidos"
-                                class="usuario-nav-item"
-                            >
-                                <i class="fa-solid fa-clock-rotate-left"></i>
-                                <span>Histórico de Pedidos</span>
-                            </a>
-                            <a
-                                href="index.html"
-                                class="usuario-nav-item logout-link"
-                            >
-                                <i
-                                    class="fa-solid fa-arrow-right-from-bracket"
-                                ></i>
-                                <span>Sair da Conta</span>
-                            </a>
-                        </nav>
-                    </aside>
-
-                    <section class="usuario-main-content">
-                        <form class="usuario-form" action="" method="post">
-                            <div class="usuario-card" id="dados-pessoais">
-                                <div class="form-section-title">
-                                    <div class="section-title-group">
-                                        <i
-                                            class="fa-solid fa-id-card icon-title"
-                                        ></i>
-                                        <div>
-                                            <h3>Dados Pessoais</h3>
-                                            <p>
-                                                Informações básicas de
-                                                identificação
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <span class="section-badge"
-                                        >Tabela: Clientes</span
-                                    >
-                                </div>
-
-                                <div class="form-grid">
-                                    <div class="form-group full-width">
-                                        <label for="nome">
-                                            <i class="fa-solid fa-user"></i>
-                                            Nome Completo
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="nome"
-                                            name="nome"
-                                            value="Carlos Eduardo Silva"
-                                            placeholder="Digite seu nome completo"
-                                            required
-                                            maxlength="100"
-                                        />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="email">
-                                            <i class="fa-solid fa-envelope"></i>
-                                            E-mail
-                                        </label>
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            value="teste@gmail.com"
-                                            placeholder="seuEmail@exemplo.com"
-                                            required
-                                            maxlength="100"
-                                        />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="numero_telefone">
-                                            <i class="fa-solid fa-phone"></i>
-                                            Telefone / Celular
-                                        </label>
-                                        <input
-                                            type="tel"
-                                            id="numero_telefone"
-                                            name="numero_telefone"
-                                            value="55 31 9 8821 2934"
-                                            placeholder="(00) 00000-0000"
-                                            required
-                                            maxlength="20"
-                                        />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="cpf">
-                                            <i
-                                                class="fa-solid fa-address-card"
-                                            ></i>
-                                            CPF
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="cpf"
-                                            name="cpf"
-                                            value="12739472530"
-                                            placeholder="000.000.000-00"
-                                            required
-                                            maxlength="14"
-                                        />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="id">
-                                            <i class="fa-solid fa-hashtag"></i>
-                                            Identificador (ID do Cliente)
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="id"
-                                            name="id"
-                                            value="1"
-                                            readonly
-                                            class="input-readonly"
-                                        />
-                                        <span class="input-hint"
-                                            >Gerado automaticamente pelo
-                                            sistema</span
-                                        >
-                                    </div>
+                        <div class="usuario-card" id="endereco-entrega">
+                            <div class="card-section-title">
+                                <i class="fa-solid fa-location-dot icon-title"></i>
+                                <div>
+                                    <h3>Endereço de Entrega</h3>
+                                    <p>Local de entrega padrão para pedidos de café</p>
                                 </div>
                             </div>
 
-                            <div class="usuario-card" id="endereco-entrega">
-                                <div class="form-section-title">
-                                    <div class="section-title-group">
-                                        <i
-                                            class="fa-solid fa-location-dot icon-title"
-                                        ></i>
-                                        <div>
-                                            <h3>Endereço de Entrega</h3>
-                                            <p>
-                                                Local de entrega padrão para
-                                                pedidos de café
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <span class="section-badge"
-                                        >Entrega Solaris</span
-                                    >
+                            <div class="user-info-grid">
+                                <div class="user-info-item">
+                                    <span class="user-info-label">
+                                        <i class="fa-solid fa-map-pin"></i>
+                                        CEP
+                                    </span>
+                                    <span class="user-info-value">12984-638</span>
                                 </div>
 
-                                <div class="form-grid">
-                                    <div class="form-group">
-                                        <label for="cep">
-                                            <i class="fa-solid fa-map-pin"></i>
-                                            CEP
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="cep"
-                                            name="cep"
-                                            value="1298463892"
-                                            placeholder="00000-000"
-                                            required
-                                            maxlength="10"
-                                        />
-                                    </div>
+                                <div class="user-info-item">
+                                    <span class="user-info-label">
+                                        <i class="fa-solid fa-city"></i>
+                                        Bairro
+                                    </span>
+                                    <span class="user-info-value">Teste</span>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label for="bairro">
-                                            <i class="fa-solid fa-city"></i>
-                                            Bairro
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="bairro"
-                                            name="bairro"
-                                            value="Teste"
-                                            placeholder="Seu bairro"
-                                            required
-                                            maxlength="100"
-                                        />
-                                    </div>
+                                <div class="user-info-item full-width">
+                                    <span class="user-info-label">
+                                        <i class="fa-solid fa-road"></i>
+                                        Rua / Logradouro
+                                    </span>
+                                    <span class="user-info-value">teste</span>
+                                </div>
 
-                                    <div class="form-group span-2">
-                                        <label for="rua">
-                                            <i class="fa-solid fa-road"></i>
-                                            Rua / Logradouro
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="rua"
-                                            name="rua"
-                                            value="teste"
-                                            placeholder="Nome da rua ou avenida"
-                                            required
-                                            maxlength="150"
-                                        />
-                                    </div>
+                                <div class="user-info-item">
+                                    <span class="user-info-label">
+                                        <i class="fa-solid fa-house"></i>
+                                        Número
+                                    </span>
+                                    <span class="user-info-value">2947</span>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label for="numero">
-                                            <i class="fa-solid fa-house"></i>
-                                            Número
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="numero"
-                                            name="numero"
-                                            value="2947"
-                                            placeholder="Ex: 123"
-                                            required
-                                            maxlength="20"
-                                        />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="complemento_endereco">
-                                            <i class="fa-solid fa-building"></i>
-                                            Complemento
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="complemento_endereco"
-                                            name="complemento_endereco"
-                                            value="Casa"
-                                            placeholder="Apto, bloco, referência..."
-                                            maxlength="100"
-                                        />
-                                    </div>
+                                <div class="user-info-item">
+                                    <span class="user-info-label">
+                                        <i class="fa-solid fa-building"></i>
+                                        Complemento
+                                    </span>
+                                    <span class="user-info-value">Casa</span>
                                 </div>
                             </div>
-
-                            <div class="usuario-card" id="seguranca-senha">
-                                <div class="form-section-title">
-                                    <div class="section-title-group">
-                                        <i
-                                            class="fa-solid fa-lock icon-title"
-                                        ></i>
-                                        <div>
-                                            <h3>Segurança e Senha</h3>
-                                            <p>
-                                                Altere sua senha de autenticação
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <span class="section-badge">Protegido</span>
-                                </div>
-
-                                <div class="form-grid">
-                                    <div class="form-group">
-                                        <label for="senha">
-                                            <i class="fa-solid fa-key"></i>
-                                            Senha Atual
-                                        </label>
-                                        <input
-                                            type="password"
-                                            id="senha"
-                                            name="senha"
-                                            placeholder="••••••••"
-                                            maxlength="50"
-                                        />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="nova_senha">
-                                            <i class="fa-solid fa-lock"></i>
-                                            Nova Senha
-                                        </label>
-                                        <input
-                                            type="password"
-                                            id="nova_senha"
-                                            name="nova_senha"
-                                            placeholder="No mínimo 6 caracteres"
-                                            maxlength="50"
-                                        />
-                                    </div>
-
-                                    <div class="form-group span-2">
-                                        <label for="confirmar_senha">
-                                            <i
-                                                class="fa-solid fa-shield-halved"
-                                            ></i>
-                                            Confirmar Nova Senha
-                                        </label>
-                                        <input
-                                            type="password"
-                                            id="confirmar_senha"
-                                            name="confirmar_senha"
-                                            placeholder="Repita a nova senha"
-                                            maxlength="50"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div class="info-box">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>
-                                        Para manter sua conta segura, utilize
-                                        uma senha com letras maiúsculas,
-                                        minúsculas, números e caracteres
-                                        especiais.
-                                    </p>
-                                </div>
-                                <div class="form-actions-bar">
-                                    <button type="reset" class="btn-cancel">
-                                        <i class="fa-solid fa-rotate-left"></i>
-                                        Descartar Alterações
-                                    </button>
-                                    <button type="submit" class="btn-submit">
-                                        <i class="fa-solid fa-floppy-disk"></i>
-                                        Salvar Alterações
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                        </div>
 
                         <div class="usuario-card" id="historico-pedidos">
-                            <div class="form-section-title">
-                                <div class="section-title-group">
-                                    <i
-                                        class="fa-solid fa-clock-rotate-left icon-title"
-                                    ></i>
-                                    <div>
-                                        <h3>Histórico de Pedidos Recentes</h3>
-                                        <p>Acompanhe suas compras e entregas</p>
-                                    </div>
+                            <div class="card-section-title">
+                                <i class="fa-solid fa-clock-rotate-left icon-title"></i>
+                                <div>
+                                    <h3>Histórico de Pedidos Recentes</h3>
+                                    <p>Acompanhe suas compras e entregas</p>
                                 </div>
-                                <span class="section-badge"
-                                    >Tabela: Pedidos</span
-                                >
                             </div>
 
                             <div class="orders-list">
                                 <div class="order-item-card">
                                     <div class="order-info-col">
                                         <div class="order-header-line">
-                                            <span class="order-code"
-                                                >Pedido #0001</span
-                                            >
-                                            <span
-                                                class="order-status-tag status-received"
-                                            >
-                                                <i
-                                                    class="fa-solid fa-spinner"
-                                                ></i>
+                                            <span class="order-code">Pedido #0001</span>
+                                            <span class="order-status-tag status-received">
+                                                <i class="fa-solid fa-clock"></i>
                                                 Recebido
                                             </span>
                                         </div>
                                         <span class="order-date">
-                                            <i
-                                                class="fa-regular fa-calendar"
-                                            ></i>
+                                            <i class="fa-regular fa-calendar"></i>
                                             09/11/2026 às 20:13
                                         </span>
                                         <p class="order-description">
-                                            <strong>3x</strong> Café Espresso
-                                            Artesanal Solaris
+                                            <strong>3x</strong> Café Espresso Artesanal Solaris
                                         </p>
                                     </div>
 
                                     <div class="order-price-col">
-                                        <span class="order-total-label"
-                                            >Total do Pedido</span
-                                        >
-                                        <span class="order-total-value"
-                                            >R$ 18,00</span
-                                        >
-                                        <a
-                                            href="menu.html"
-                                            class="btn-order-details"
-                                        >
+                                        <span class="order-total-label">Total do Pedido</span>
+                                        <span class="order-total-value">R$ 18,00</span>
+                                        <a href="menu.html" class="btn-order-details">
                                             <span>Pedir novamente</span>
-                                            <i
-                                                class="fa-solid fa-arrow-right"
-                                            ></i>
+                                            <i class="fa-solid fa-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -483,6 +207,7 @@
                 </div>
             </div>
         </main>
+
         <div id="footer-container"></div>
         <script src="assets/javascript/components.js"></script>
     </body>

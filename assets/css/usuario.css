@@ -1,3 +1,13 @@
+/* ======================================================
+   Café Solaris - Página de Usuário / Área do Cliente
+   Alinhada com global.css, singin.css e home.css
+   ====================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Container e Seção Principal */
 .usuario-sec {
     display: flex;
     justify-content: center;
@@ -14,12 +24,11 @@
     gap: 2rem;
 }
 
+/* Header da Página de Usuário */
 .usuario-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--primary);
 }
@@ -27,13 +36,14 @@
 .usuario-header-title {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.5rem;
 }
 
-.usuario-header-title h1 {
+.usuario-title {
     color: var(--text);
-    font-size: 2.2rem;
     font-family: var(--font-logo), var(--font);
+    font-size: 2.5rem;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
@@ -42,165 +52,78 @@
     font-size: 1rem;
 }
 
-.usuario-header-badge {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    background-color: rgba(115, 86, 70, 0.35);
-    border: 1px solid var(--primary);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.usuario-header-badge i {
-    color: var(--tertiary);
-}
-
+/* Grid Layout Principal */
 .usuario-grid {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 290px 1fr;
     gap: 2rem;
     align-items: start;
 }
+
+/* Sidebar Unificada */
 .usuario-sidebar {
+    position: sticky;
+    top: 2rem;
+}
+
+.usuario-nav-box {
+    background-color: rgba(34, 18, 18, 0.85);
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 2rem 1.25rem 1.5rem 1.25rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.user-profile-card {
-    background-color: rgba(34, 18, 18, 0.85);
-    border: 1px solid var(--primary);
-    border-radius: 12px;
-    padding: 2rem 1.5rem;
+.user-profile-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-.user-avatar-wrapper {
-    position: relative;
-    margin-bottom: 1.2rem;
 }
 
 .user-avatar {
-    width: 96px;
-    height: 96px;
+    width: 88px;
+    height: 88px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary), var(--background));
-    border: 3px solid var(--secondary);
+    border: 2px solid var(--secondary);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text);
-    font-size: 2.6rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.user-avatar-badge {
-    position: absolute;
-    bottom: 2px;
-    right: 2px;
-    width: 30px;
-    height: 30px;
-    background-color: var(--tertiary);
-    color: var(--text);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    border: 2px solid var(--background);
-    cursor: pointer;
-    transition:
-        transform 0.2s ease,
-        background-color 0.2s ease;
-}
-
-.user-avatar-badge:hover {
-    transform: scale(1.1);
-    background-color: #8f8502;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
 }
 
 .user-name {
     color: var(--text);
     font-size: 1.35rem;
     font-weight: 700;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
 }
 
 .user-email {
     color: var(--secondary);
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     word-break: break-all;
-    margin-bottom: 1rem;
 }
 
-.user-role-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    background-color: var(--primary);
-    color: var(--text);
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-}
-
-.user-meta-info {
-    width: 100%;
-    margin-top: 1.5rem;
-    padding-top: 1.2rem;
-    border-top: 1px solid rgba(115, 86, 70, 0.5);
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    text-align: left;
-}
-
-.meta-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.88rem;
-}
-
-.meta-label {
-    color: var(--secondary);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.meta-value {
-    color: var(--text);
-    font-weight: 600;
-}
-
-.usuario-nav-box {
-    background-color: rgba(34, 18, 18, 0.85);
-    border: 1px solid var(--primary);
-    border-radius: 12px;
-    padding: 1rem;
+/* Links de Navegação da Sidebar */
+.usuario-nav-menu {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--primary);
 }
 
 .usuario-nav-item {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    padding: 0.85rem 1rem;
-    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
     color: var(--secondary);
     font-size: 0.95rem;
     font-weight: 600;
@@ -208,20 +131,11 @@
 }
 
 .usuario-nav-item i {
-    font-size: 1.1rem;
-    width: 22px;
+    font-size: 1.05rem;
+    width: 20px;
     text-align: center;
     color: var(--secondary);
     transition: color 0.2s ease;
-}
-
-.usuario-nav-item:hover {
-    background-color: rgba(115, 86, 70, 0.25);
-    color: var(--text);
-}
-
-.usuario-nav-item:hover i {
-    color: var(--text);
 }
 
 .usuario-nav-item.active {
@@ -235,18 +149,13 @@
 
 .usuario-nav-item.logout-link {
     color: #e57373;
-    border-top: 1px solid rgba(115, 86, 70, 0.4);
-    margin-top: 0.4rem;
+    border-top: 1px solid rgba(115, 86, 70, 0.35);
+    margin-top: 0.5rem;
     padding-top: 0.9rem;
 }
 
 .usuario-nav-item.logout-link i {
     color: #e57373;
-}
-
-.usuario-nav-item.logout-link:hover {
-    background-color: rgba(229, 115, 115, 0.15);
-    color: #ff8a80;
 }
 
 .usuario-main-content {
@@ -258,189 +167,94 @@
 .usuario-card {
     background-color: rgba(34, 18, 18, 0.85);
     border: 1px solid var(--primary);
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 2.2rem 2rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    scroll-margin-top: 2rem;
 }
 
-.form-section-title {
+/* Título das Seções de Card */
+.card-section-title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 0.8rem;
     border-bottom: 1px solid var(--primary);
     padding-bottom: 0.75rem;
     margin-bottom: 1.5rem;
 }
 
-.section-title-group {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
+.card-section-title .icon-title {
+    color: var(--text);
+    font-size: 1.8rem;
 }
 
-.section-title-group h3 {
+.card-section-title h3 {
     color: var(--text);
     font-size: 1.25rem;
     font-weight: 700;
 }
 
-.section-title-group p {
+.card-section-title p {
     color: var(--secondary);
-    font-size: 0.85rem;
-    margin-top: 0.15rem;
-}
-
-.icon-title {
-    color: var(--text);
-    font-size: 1.5rem;
-}
-
-.section-badge {
-    font-size: 0.75rem;
-    color: var(--secondary);
-    background-color: rgba(115, 86, 70, 0.3);
-    border: 1px solid var(--primary);
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.3rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.45rem;
-}
-
-.form-group.full-width {
-    grid-column: 1 / -1;
-}
-
-.form-group.span-2 {
-    grid-column: 1 / -1;
-}
-
-.form-group label {
-    color: var(--text);
-    font-size: 0.95rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.form-group label i {
-    color: var(--secondary);
-    font-size: 0.9rem;
-    width: 16px;
-    text-align: center;
-}
-
-.form-group input {
-    height: 46px;
-    background-color: rgba(13, 13, 13, 0.6);
-    color: var(--text);
-    border: 1px solid var(--secondary);
-    border-radius: 6px;
-    padding: 0 1rem;
-    font-size: 1rem;
-    font-family: var(--font);
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease,
-        background-color 0.2s ease;
-}
-
-.form-group input:focus {
-    outline: none;
-    border-color: var(--tertiary);
-    box-shadow: 0 0 0 3px rgba(115, 107, 2, 0.25);
-    background-color: rgba(13, 13, 13, 0.85);
-}
-
-.form-group input::placeholder {
-    color: rgba(217, 208, 193, 0.45);
-}
-
-.form-group input.input-readonly,
-.form-group input:read-only {
-    background-color: rgba(34, 18, 18, 0.45);
-    border-style: dashed;
-    border-color: rgba(217, 208, 193, 0.35);
-    color: var(--secondary);
-    cursor: not-allowed;
-}
-
-.input-hint {
-    color: rgba(217, 208, 193, 0.6);
-    font-size: 0.8rem;
+    font-size: 0.88rem;
     margin-top: 0.2rem;
 }
 
-.form-actions-bar {
+/* Grid de Exibição das Informações (Read-Only) */
+.user-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.user-info-item {
+    background-color: rgba(13, 13, 13, 0.45);
+    border-radius: 4px;
+    padding: 0.85rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.user-info-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.user-info-label {
+    color: var(--secondary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--primary);
-    flex-wrap: wrap;
-}
-
-.btn-submit {
-    height: 48px;
-    padding: 0 2rem;
-    background-color: var(--tertiary);
-    color: var(--text);
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 6px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    cursor: pointer;
-    transition:
-        background-color 0.2s ease,
-        transform 0.1s ease,
-        box-shadow 0.2s ease;
-}
-
-.btn-submit:hover {
-    background-color: #8c8203;
-    box-shadow: 0 4px 12px rgba(115, 107, 2, 0.35);
-}
-
-.btn-submit:active {
-    transform: scale(0.98);
-}
-
-.btn-cancel {
-    height: 48px;
-    padding: 0 1.5rem;
-    background-color: transparent;
-    color: var(--secondary);
-    border: 1px solid var(--secondary);
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 6px;
-    display: inline-flex;
-    align-items: center;
     gap: 0.5rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
 }
 
-.btn-cancel:hover {
-    background-color: rgba(217, 208, 193, 0.1);
+.user-info-label i {
+    color: var(--secondary);
+    font-size: 0.85rem;
+    width: 14px;
+    text-align: center;
+}
+
+.user-info-value {
     color: var(--text);
-    border-color: var(--text);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    word-break: break-word;
 }
 
+.password-masked {
+    letter-spacing: 3px;
+    font-size: 1.25rem;
+    color: var(--secondary);
+}
+
+/* Histórico de Pedidos */
 .orders-list {
     display: flex;
     flex-direction: column;
@@ -448,9 +262,9 @@
 }
 
 .order-item-card {
-    background-color: rgba(13, 13, 13, 0.5);
+    background-color: rgba(13, 13, 13, 0.45);
     border: 1px solid var(--primary);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 1.25rem 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -462,15 +276,10 @@
         background-color 0.2s ease;
 }
 
-.order-item-card:hover {
-    border-color: var(--secondary);
-    background-color: rgba(13, 13, 13, 0.7);
-}
-
 .order-info-col {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 0.35rem;
 }
 
 .order-header-line {
@@ -497,7 +306,7 @@
 }
 
 .status-received {
-    background-color: rgba(115, 107, 2, 0.3);
+    background-color: rgba(115, 107, 2, 0.25);
     color: #e5db74;
     border: 1px solid var(--tertiary);
 }
@@ -517,7 +326,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 0.4rem;
+    gap: 0.45rem;
 }
 
 .order-total-label {
@@ -534,39 +343,16 @@
 .btn-order-details {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    color: var(--secondary);
-    font-size: 0.88rem;
-    font-weight: 600;
-    text-decoration: underline;
-    transition: color 0.2s ease;
-}
-
-.btn-order-details:hover {
+    gap: 0.45rem;
+    background-color: var(--tertiary);
     color: var(--text);
-}
-
-.info-box {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.8rem;
-    background-color: rgba(115, 86, 70, 0.2);
-    border: 1px solid var(--primary);
-    border-radius: 8px;
-    padding: 1rem 1.2rem;
-    margin-top: 1.2rem;
-}
-
-.info-box i {
-    color: var(--tertiary);
-    font-size: 1.2rem;
-    margin-top: 0.1rem;
-}
-
-.info-box p {
-    color: var(--secondary);
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 0.88rem;
+    font-weight: 700;
+    padding: 0.45rem 0.9rem;
+    border-radius: 4px;
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease;
 }
 
 @media (max-width: 992px) {
@@ -575,14 +361,10 @@
     }
 
     .usuario-sidebar {
-        order: 1;
+        position: static;
     }
 
-    .usuario-main-content {
-        order: 2;
-    }
-
-    .usuario-nav-box {
+    .usuario-nav-menu {
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -595,7 +377,7 @@
     .usuario-nav-item.logout-link {
         border-top: none;
         margin-top: 0;
-        padding-top: 0.85rem;
+        padding-top: 0.8rem;
         flex-basis: 100%;
     }
 }
@@ -609,24 +391,12 @@
         padding: 1.5rem 1.2rem;
     }
 
-    .form-grid {
+    .user-info-grid {
         grid-template-columns: 1fr;
     }
 
-    .form-group.span-2,
-    .form-group.full-width {
+    .user-info-item.full-width {
         grid-column: 1;
-    }
-
-    .form-actions-bar {
-        flex-direction: column-reverse;
-        width: 100%;
-    }
-
-    .btn-submit,
-    .btn-cancel {
-        width: 100%;
-        justify-content: center;
     }
 
     .usuario-header {
