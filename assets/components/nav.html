@@ -7,11 +7,12 @@
         <a href="index.html" class="logo-title">Cafe Solaris</a>
     </div>
     <div id="right-header-nav">
-            <form action="../../menu.html" id="nav-search">
-                <input type="text" placeholder="Procure no menu" />
+        <form action="menu.html" method="GET" id="nav-search">
+            <input type="text" name="busca" placeholder="Procure no menu" />
+            <button type="submit" class="nav-search-btn">
                 <i class="fa-solid fa-magnifying-glass nav-search-i"></i>
-            </form>
-        </div>
+            </button>
+        </form>
         <button
             command="show-modal"
             commandfor="login-dialog"

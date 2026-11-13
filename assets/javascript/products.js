@@ -1,38 +1,114 @@
-const fmt_moeda = new Intl.NumberFormat(`pt-BR`, {
-  style: `currency`,
-  currency: `BRL`,
+const currency_formatter = new Intl.NumberFormat("pt-BR", {
+  style: "currency",
+  currency: "BRL",
 });
+
 let products = [];
 let categories = [];
 
-async function put_products(category_filter, search_filter) {
-  const nofilter =
-    category_filter == "no-filter" || category_filter == undefined;
+// Function that ONLY renders the products in the HTML
+async function render_products(products_list) {
   let grid = document.getElementById("products-grid");
+  if (!grid) {
+    return;
+  }
+
   let card = await (await fetch("assets/components/product-card.html")).text();
-  let title = document.createElement("h2");
-  title.textContent =
-    nofilter === false ? `filtrando por ${category_filter}` : "";
-  grid.replaceChildren();
-  document.body
-    .querySelector("main")
-    .querySelector("h2")
-    .replaceWith(title);
-  for (let i = 0; i < products.length; i++) {
-    if (products[i].categoria === category_filter || nofilter) {
-      let temp = document.createElement("div");
-      temp.innerHTML = card;
-      temp.querySelector("img").src =
-        `assets/img/products/${`${products[i].id}`.padStart(3, "0")}.webp`;
-      temp.querySelector(".product-name").innerHTML = products[i].nome;
-      temp.querySelector(".tag").innerHTML = products[i].categoria;
-      temp.querySelector(".product-card-price").innerHTML = fmt_moeda.format(
-        Number(products[i].preco),
-      );
-      grid.appendChild(temp);
-    }
+  grid.innerHTML = "";
+
+  if (products_list.length === 0) {
+    grid.innerHTML = "<p>Nenhum produto encontrado.</p>";
+    return;
+  }
+
+  for (let i = 0; i < products_list.length; i++) {
+    let product = products_list[i];
+    let card_element = document.createElement("div");
+    card_element.innerHTML = card;
+
+    let formatted_id = String(product.id).padStart(3, "0");
+    card_element.querySelector("img").src = `assets/img/products/${formatted_id}.webp`;
+    card_element.querySelector(".product-name").innerHTML = product.nome;
+    card_element.querySelector(".tag").innerHTML = product.categoria;
+    card_element.querySelector(".product-card-price").innerHTML = currency_formatter.format(
+      Number(product.preco)
+    );
+
+    grid.appendChild(card_element);
   }
 }
+
+// Alias in case the function is called with the typo from the prompt
+const render_produtcs = render_products;
+
+// Filter function: generates a new array filtering by category and search
+function filter_products(category, search) {
+  let filtered_products = [];
+
+  for (let i = 0; i < products.length; i++) {
+    let product = products[i];
+    let matches_category = true;
+    let matches_search = true;
+
+    // Filter by category
+    if (category && category !== "no-filter" && category !== "todos") {
+      if (product.categoria.toLowerCase() !== category.toLowerCase()) {
+        matches_category = false;
+      }
+    }
+
+    // Filter by search term (in name or description)
+    if (search && search.trim() !== "") {
+      let term = search.toLowerCase().trim();
+      let name = product.nome.toLowerCase();
+      let description = product.descricao ? product.descricao.toLowerCase() : "";
+
+      if (!name.includes(term) && !description.includes(term)) {
+        matches_search = false;
+      }
+    }
+
+    // If matches both filters, add to the list
+    if (matches_category && matches_search) {
+      filtered_products.push(product);
+    }
+  }
+
+  return filtered_products;
+}
+
+// Portuguese alias
+const filtrar_produtos = filter_products;
+
+// Updates the h2 heading showing the current filter
+function update_title(category, search) {
+  let search_h2 = document.getElementById("search-h2");
+  if (!search_h2) {
+    return;
+  }
+
+  let has_category = category && category !== "no-filter" && category !== "todos";
+  let has_search = search && search.trim() !== "";
+
+  if (has_category && has_search) {
+    search_h2.textContent = `Filtrando por "${category}" e busca "${search}"`;
+  } else if (has_category) {
+    search_h2.textContent = `Filtrando por ${category}`;
+  } else if (has_search) {
+    search_h2.textContent = `Resultados para "${search}"`;
+  } else {
+    search_h2.textContent = "";
+  }
+}
+
+// Kept for compatibility (e.g., called in index-load.js)
+async function put_products(category_filter, search_filter) {
+  let filtered = filter_products(category_filter, search_filter);
+  update_title(category_filter, search_filter);
+  await render_products(filtered);
+}
+
+// Gets unique categories from products
 async function get_categories() {
   let categories = [products[0]];
   for (let i = 1; i < products.length; i++) {
@@ -42,24 +118,78 @@ async function get_categories() {
   }
   return categories;
 }
+
+// Renders category buttons and handles click event with URL parameters
 async function put_categories() {
   let categories_card = await (
     await fetch("assets/components/category-card.html")
   ).text();
   let cat_nav = document.querySelector("#categories");
+  if (!cat_nav) {
+    return;
+  }
   cat_nav.replaceChildren();
+
   for (let i = 0; i < categories.length; i++) {
-    let temp = document.createElement("div");
-    temp.innerHTML = categories_card;
-    temp.querySelector(".category-nav").dataset.category =
+    let card_element = document.createElement("div");
+    card_element.innerHTML = categories_card;
+    card_element.querySelector(".category-nav").dataset.category =
       categories[i].categoria;
-    temp.querySelector(".category-img").src =
-      `assets/img/products/${`${categories[i].id}`.padStart(3, "0")}.webp`;
-    temp.querySelector(".category-name").innerHTML = categories[i].categoria;
-    let btn = temp.querySelector("button");
+    let formatted_id = String(categories[i].id).padStart(3, "0");
+    card_element.querySelector(".category-img").src =
+      `assets/img/products/${formatted_id}.webp`;
+    card_element.querySelector(".category-name").innerHTML = categories[i].categoria;
+
+    let btn = card_element.querySelector("button");
     btn.addEventListener("click", async () => {
-      put_products(btn.dataset.category);
+      let params = new URLSearchParams(window.location.search);
+      let clicked_category = btn.dataset.category;
+
+      // If clicking the same category, deselect it; otherwise, select the new one
+      if (params.get("categoria") === clicked_category) {
+        params.delete("categoria");
+      } else {
+        params.set("categoria", clicked_category);
+      }
+
+      let query_string = params.toString();
+      let new_url = query_string ? "menu.html?" + query_string : "menu.html";
+
+      try {
+        window.history.pushState({}, "", new_url);
+        await apply_url_filters();
+      } catch (e) {
+        window.location.href = new_url;
+      }
     });
-    cat_nav.appendChild(temp);
+
+    cat_nav.appendChild(card_element);
   }
 }
+
+// Reads search and category parameters from URL, filters products and renders them
+async function apply_url_filters() {
+  let params = new URLSearchParams(window.location.search);
+  let category = params.get("categoria");
+  let search = params.get("busca");
+
+  // Fill search inputs on screen if they exist
+  let menu_input = document.querySelector("#search-menu input");
+  if (menu_input) {
+    menu_input.value = search ? search : "";
+  }
+  let nav_input = document.querySelector("#nav-search input");
+  if (nav_input) {
+    nav_input.value = search ? search : "";
+  }
+
+  // Update h2 title
+  update_title(category, search);
+
+  // Filter and pass the new array to render_products
+  let filtered_products = filter_products(category, search);
+  await render_products(filtered_products);
+}
+
+// Portuguese alias
+const aplicar_filtros_da_url = apply_url_filters;

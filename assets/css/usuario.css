@@ -1,13 +1,8 @@
-/* ======================================================
-   Café Solaris - Página de Usuário / Área do Cliente
-   Alinhada com global.css, singin.css e home.css
-   ====================================================== */
 
 html {
     scroll-behavior: smooth;
 }
 
-/* Container e Seção Principal */
 .usuario-sec {
     display: flex;
     justify-content: center;
@@ -24,7 +19,6 @@ html {
     gap: 2rem;
 }
 
-/* Header da Página de Usuário */
 .usuario-header {
     display: flex;
     justify-content: space-between;
@@ -52,7 +46,6 @@ html {
     font-size: 1rem;
 }
 
-/* Grid Layout Principal */
 .usuario-grid {
     display: grid;
     grid-template-columns: 290px 1fr;
@@ -60,7 +53,6 @@ html {
     align-items: start;
 }
 
-/* Sidebar Unificada */
 .usuario-sidebar {
     position: sticky;
     top: 2rem;
@@ -109,7 +101,6 @@ html {
     word-break: break-all;
 }
 
-/* Links de Navegação da Sidebar */
 .usuario-nav-menu {
     display: flex;
     flex-direction: column;
@@ -172,7 +163,6 @@ html {
     scroll-margin-top: 2rem;
 }
 
-/* Título das Seções de Card */
 .card-section-title {
     display: flex;
     align-items: center;
@@ -199,7 +189,6 @@ html {
     margin-top: 0.2rem;
 }
 
-/* Grid de Exibição das Informações (Read-Only) */
 .user-info-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -254,7 +243,6 @@ html {
     color: var(--secondary);
 }
 
-/* Histórico de Pedidos */
 .orders-list {
     display: flex;
     flex-direction: column;

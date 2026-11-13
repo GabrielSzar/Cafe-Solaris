@@ -68,7 +68,6 @@ button {
 .highlight {
     font-weight: 600;
 }
-/*Nav Section*/
 .header-nav {
     display: flex;
     justify-content: space-between;
@@ -105,6 +104,14 @@ nav > div {
         color: var(--text);
         margin-right: 0.3rem;
     }
+    .nav-search-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
 }
 .nav-search-i {
     font-size: 1.3rem;
@@ -134,7 +141,6 @@ nav > div {
     background: none;
     color: var(--text);
 }
-/*Login modal*/
 #login-dialog {
     position: absolute;
     width: 100%;
@@ -225,7 +231,6 @@ nav > div {
         text-decoration: underline;
     }
 }
-/*Footer*/
 footer {
     border-top: solid 1px var(--secondary);
     padding: 4rem 8rem;
@@ -237,7 +242,6 @@ footer {
         padding: 2rem 0px;
     }
 }
-/*Products*/
 .product-card {
     background: var(--background);
     display: flex;

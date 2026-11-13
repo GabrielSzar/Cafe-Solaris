@@ -7,6 +7,15 @@ async function load_components() {
   footer.innerHTML = template_footer;
   nav.innerHTML = template_nav;
   document.body.insertAdjacentHTML("beforeend", template_login);
+
+  let params = new URLSearchParams(window.location.search);
+  let search = params.get("busca");
+  if (search) {
+    let nav_input = document.querySelector("#nav-search input");
+    if (nav_input) {
+      nav_input.value = search;
+    }
+  }
 }
 addEventListener("DOMContentLoaded", async (e) =>  {
   await load_components();
