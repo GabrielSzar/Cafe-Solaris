@@ -42,14 +42,16 @@
     width: 200px;
     height: 200px;
     border: solid 1px var(--secondary);
-    h3 {
-        color: var(--text);
-    }
+    background-color: var(--background);
 }
 .category-img {
     width: 128px;
     height: 128px;
     background-color: #fff;
+}
+.category-name {
+    font-size: 1.2rem;
+    color: var(--text);
 }
 main {
     background-color: var(--secondary);
