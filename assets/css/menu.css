@@ -27,7 +27,6 @@
         color: var(--text);
     }
 }
-/*Categories*/
 #categories {
     display: flex;
     padding: 4rem;

@@ -1,15 +1,11 @@
 addEventListener("DOMContentLoaded", async (e) => {
-  // Load data from JSON
   products = await (await fetch("data/produtos.json")).json();
   categories = await get_categories();
 
-  // Render category buttons on screen
   await put_categories();
 
-  // Apply URL filters (category and search) and render products
   await apply_url_filters();
 
-  // Add submit event listener to menu search form
   let menu_form = document.getElementById("search-menu");
   if (menu_form) {
     menu_form.addEventListener("submit", async (event) => {
@@ -37,12 +33,10 @@ addEventListener("DOMContentLoaded", async (e) => {
   }
 });
 
-// Update products list when user clicks browser back/forward buttons
 window.addEventListener("popstate", async () => {
   await apply_url_filters();
 });
 
-// Intercept nav search submit when submitted inside menu page
 document.addEventListener("submit", async (event) => {
   if (event.target && event.target.id === "nav-search" && document.getElementById("search-menu")) {
     event.preventDefault();

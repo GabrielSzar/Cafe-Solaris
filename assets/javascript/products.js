@@ -6,7 +6,6 @@ const currency_formatter = new Intl.NumberFormat("pt-BR", {
 let products = [];
 let categories = [];
 
-// Function that ONLY renders the products in the HTML
 async function render_products(products_list) {
   let grid = document.getElementById("products-grid");
   if (!grid) {
@@ -38,10 +37,6 @@ async function render_products(products_list) {
   }
 }
 
-// Alias in case the function is called with the typo from the prompt
-const render_produtcs = render_products;
-
-// Filter function: generates a new array filtering by category and search
 function filter_products(category, search) {
   let filtered_products = [];
 
@@ -50,14 +45,12 @@ function filter_products(category, search) {
     let matches_category = true;
     let matches_search = true;
 
-    // Filter by category
     if (category && category !== "no-filter" && category !== "todos") {
       if (product.categoria.toLowerCase() !== category.toLowerCase()) {
         matches_category = false;
       }
     }
 
-    // Filter by search term (in name or description)
     if (search && search.trim() !== "") {
       let term = search.toLowerCase().trim();
       let name = product.nome.toLowerCase();
@@ -68,7 +61,6 @@ function filter_products(category, search) {
       }
     }
 
-    // If matches both filters, add to the list
     if (matches_category && matches_search) {
       filtered_products.push(product);
     }
@@ -77,10 +69,6 @@ function filter_products(category, search) {
   return filtered_products;
 }
 
-// Portuguese alias
-const filtrar_produtos = filter_products;
-
-// Updates the h2 heading showing the current filter
 function update_title(category, search) {
   let search_h2 = document.getElementById("search-h2");
   if (!search_h2) {
@@ -101,14 +89,12 @@ function update_title(category, search) {
   }
 }
 
-// Kept for compatibility (e.g., called in index-load.js)
 async function put_products(category_filter, search_filter) {
   let filtered = filter_products(category_filter, search_filter);
   update_title(category_filter, search_filter);
   await render_products(filtered);
 }
 
-// Gets unique categories from products
 async function get_categories() {
   let categories = [products[0]];
   for (let i = 1; i < products.length; i++) {
@@ -119,7 +105,6 @@ async function get_categories() {
   return categories;
 }
 
-// Renders category buttons and handles click event with URL parameters
 async function put_categories() {
   let categories_card = await (
     await fetch("assets/components/category-card.html")
@@ -145,7 +130,6 @@ async function put_categories() {
       let params = new URLSearchParams(window.location.search);
       let clicked_category = btn.dataset.category;
 
-      // If clicking the same category, deselect it; otherwise, select the new one
       if (params.get("categoria") === clicked_category) {
         params.delete("categoria");
       } else {
@@ -167,13 +151,11 @@ async function put_categories() {
   }
 }
 
-// Reads search and category parameters from URL, filters products and renders them
 async function apply_url_filters() {
   let params = new URLSearchParams(window.location.search);
   let category = params.get("categoria");
   let search = params.get("busca");
 
-  // Fill search inputs on screen if they exist
   let menu_input = document.querySelector("#search-menu input");
   if (menu_input) {
     menu_input.value = search ? search : "";
@@ -183,13 +165,7 @@ async function apply_url_filters() {
     nav_input.value = search ? search : "";
   }
 
-  // Update h2 title
   update_title(category, search);
-
-  // Filter and pass the new array to render_products
   let filtered_products = filter_products(category, search);
   await render_products(filtered_products);
 }
-
-// Portuguese alias
-const aplicar_filtros_da_url = apply_url_filters;
