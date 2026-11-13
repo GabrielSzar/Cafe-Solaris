@@ -5,11 +5,19 @@ const fmt_moeda = new Intl.NumberFormat(`pt-BR`, {
 let products = [];
 let categories = [];
 
-async function put_products(category_filter) {
+async function put_products(category_filter, search_filter) {
+  const nofilter =
+    category_filter == "no-filter" || category_filter == undefined;
   let grid = document.getElementById("products-grid");
   let card = await (await fetch("assets/components/product-card.html")).text();
+  let title = document.createElement("h2");
+  title.textContent =
+    nofilter === false ? `filtrando por ${category_filter}` : "";
   grid.replaceChildren();
-  const nofilter = category_filter == "no-filter";
+  document.body
+    .querySelector("main")
+    .querySelector("h2")
+    .replaceWith(title);
   for (let i = 0; i < products.length; i++) {
     if (products[i].categoria === category_filter || nofilter) {
       let temp = document.createElement("div");

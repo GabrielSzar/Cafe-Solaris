@@ -6,7 +6,7 @@ async function load_components() {
   let template_login = await (await fetch("assets/components/login-modal.html")).text();
   footer.innerHTML = template_footer;
   nav.innerHTML = template_nav;
-  document.body.innerHTML += template_login;
+  document.body.insertAdjacentHTML("beforeend", template_login);
 }
 addEventListener("DOMContentLoaded", async (e) =>  {
   await load_components();
