@@ -22,7 +22,8 @@
                         <span class="tag">Área do Cliente</span>
                         <h1 class="usuario-title">Painel do Usuário</h1>
                         <p>
-                            Consulte seus dados pessoais, endereço de entrega e histórico de pedidos
+                            Consulte seus dados pessoais, endereço de entrega e
+                            histórico de pedidos
                         </p>
                     </div>
                 </header>
@@ -34,25 +35,44 @@
                                 <div class="user-avatar">
                                     <i class="fa-solid fa-user"></i>
                                 </div>
-                                <h2 class="user-name">Tung Tung Sahur<h2>
-                                <p class="user-email">teste@gmail.com</p>
+                                <h2 class="user-name" data-campo="nome"></h2>
+                                <p class="user-email" data-campo="email"></p>
                             </div>
 
-                            <nav class="usuario-nav-menu" aria-label="Navegação da conta">
-                                <a href="#dados-pessoais" class="usuario-nav-item active">
+                            <nav
+                                class="usuario-nav-menu"
+                                aria-label="Navegação da conta"
+                            >
+                                <a
+                                    href="#dados-pessoais"
+                                    class="usuario-nav-item active"
+                                >
                                     <i class="fa-solid fa-id-card"></i>
                                     <span>Dados Pessoais</span>
                                 </a>
-                                <a href="#endereco-entrega" class="usuario-nav-item">
+                                <a
+                                    href="#endereco-entrega"
+                                    class="usuario-nav-item"
+                                >
                                     <i class="fa-solid fa-location-dot"></i>
                                     <span>Endereço de Entrega</span>
                                 </a>
-                                <a href="#historico-pedidos" class="usuario-nav-item">
-                                    <i class="fa-solid fa-clock-rotate-left"></i>
+                                <a
+                                    href="#historico-pedidos"
+                                    class="usuario-nav-item"
+                                >
+                                    <i
+                                        class="fa-solid fa-clock-rotate-left"
+                                    ></i>
                                     <span>Histórico de Pedidos</span>
                                 </a>
-                                <a href="index.html" class="usuario-nav-item logout-link">
-                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <a
+                                    href="index.html"
+                                    class="usuario-nav-item logout-link"
+                                >
+                                    <i
+                                        class="fa-solid fa-arrow-right-from-bracket"
+                                    ></i>
                                     <span>Sair da Conta</span>
                                 </a>
                             </nav>
@@ -65,7 +85,10 @@
                                 <i class="fa-solid fa-id-card icon-title"></i>
                                 <div>
                                     <h3>Dados Pessoais</h3>
-                                    <p>Informações de identificação da sua conta</p>
+                                    <p>
+                                        Informações de identificação da sua
+                                        conta
+                                    </p>
                                 </div>
                             </div>
 
@@ -75,7 +98,10 @@
                                         <i class="fa-solid fa-user"></i>
                                         Nome Completo
                                     </span>
-                                    <span class="user-info-value">Tung Tung Sahur</span>
+                                    <span
+                                        class="user-info-value"
+                                        data-campo="nome"
+                                    ></span>
                                 </div>
 
                                 <div class="user-info-item">
@@ -83,7 +109,10 @@
                                         <i class="fa-solid fa-envelope"></i>
                                         E-mail
                                     </span>
-                                    <span class="user-info-value">teste@gmail.com</span>
+                                    <span
+                                        class="user-info-value"
+                                        data-campo="email"
+                                    ></span>
                                 </div>
 
                                 <div class="user-info-item">
@@ -91,7 +120,10 @@
                                         <i class="fa-solid fa-phone"></i>
                                         Telefone / Celular
                                     </span>
-                                    <span class="user-info-value">55 31 9 8821 2934</span>
+                                    <span
+                                        class="user-info-value"
+                                        data-campo="numero_telefone"
+                                    ></span>
                                 </div>
 
                                 <div class="user-info-item">
@@ -99,7 +131,10 @@
                                         <i class="fa-solid fa-address-card"></i>
                                         CPF
                                     </span>
-                                    <span class="user-info-value">127.394.725-30</span>
+                                    <span
+                                        class="user-info-value"
+                                        data-campo="cpf"
+                                    ></span>
                                 </div>
 
                                 <div class="user-info-item">
@@ -107,17 +142,25 @@
                                         <i class="fa-solid fa-lock"></i>
                                         Senha
                                     </span>
-                                    <span class="user-info-value password-masked">••••••••</span>
+                                    <span
+                                        class="user-info-value password-masked"
+                                        >••••••••</span
+                                    >
                                 </div>
                             </div>
                         </div>
 
                         <div class="usuario-card" id="endereco-entrega">
                             <div class="card-section-title">
-                                <i class="fa-solid fa-location-dot icon-title"></i>
+                                <i
+                                    class="fa-solid fa-location-dot icon-title"
+                                ></i>
                                 <div>
                                     <h3>Endereço de Entrega</h3>
-                                    <p>Local de entrega padrão para pedidos de café</p>
+                                    <p>
+                                        Local de entrega padrão para pedidos de
+                                        café
+                                    </p>
                                 </div>
                             </div>
 
@@ -127,7 +170,10 @@
                                         <i class="fa-solid fa-map-pin"></i>
                                         CEP
                                     </span>
-                                    <span class="user-info-value">12984-638</span>
+                                    <span
+                                        class="user-info-value"
+                                        data-campo="cep"
+                                    ></span>
                                 </div>
 
                                 <div class="user-info-item">
@@ -135,7 +181,10 @@
                                         <i class="fa-solid fa-city"></i>
                                         Bairro
                                     </span>
-                                    <span class="user-info-value">Teste</span>
+                                    <span
+                                        class="user-info-value"
+                                        data-campo="bairro"
+                                    ></span>
                                 </div>
 
                                 <div class="user-info-item full-width">
@@ -143,7 +192,10 @@
                                         <i class="fa-solid fa-road"></i>
                                         Rua / Logradouro
                                     </span>
-                                    <span class="user-info-value">teste</span>
+                                    <span
+                                        class="user-info-value"
+                                        data-campo="rua"
+                                    ></span>
                                 </div>
 
                                 <div class="user-info-item">
@@ -151,7 +203,10 @@
                                         <i class="fa-solid fa-house"></i>
                                         Número
                                     </span>
-                                    <span class="user-info-value">2947</span>
+                                    <span
+                                        class="user-info-value"
+                                        data-campo="numero"
+                                    ></span>
                                 </div>
 
                                 <div class="user-info-item">
@@ -159,49 +214,26 @@
                                         <i class="fa-solid fa-building"></i>
                                         Complemento
                                     </span>
-                                    <span class="user-info-value">Casa</span>
+                                    <span
+                                        class="user-info-value"
+                                        data-campo="complemento_endereco"
+                                    ></span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="usuario-card" id="historico-pedidos">
                             <div class="card-section-title">
-                                <i class="fa-solid fa-clock-rotate-left icon-title"></i>
+                                <i
+                                    class="fa-solid fa-clock-rotate-left icon-title"
+                                ></i>
                                 <div>
                                     <h3>Histórico de Pedidos Recentes</h3>
                                     <p>Acompanhe suas compras e entregas</p>
                                 </div>
                             </div>
 
-                            <div class="orders-list">
-                                <div class="order-item-card">
-                                    <div class="order-info-col">
-                                        <div class="order-header-line">
-                                            <span class="order-code">Pedido #0001</span>
-                                            <span class="order-status-tag status-received">
-                                                <i class="fa-solid fa-clock"></i>
-                                                Recebido
-                                            </span>
-                                        </div>
-                                        <span class="order-date">
-                                            <i class="fa-regular fa-calendar"></i>
-                                            09/11/2026 às 20:13
-                                        </span>
-                                        <p class="order-description">
-                                            <strong>3x</strong> Café Espresso Artesanal Solaris
-                                        </p>
-                                    </div>
-
-                                    <div class="order-price-col">
-                                        <span class="order-total-label">Total do Pedido</span>
-                                        <span class="order-total-value">R$ 18,00</span>
-                                        <a href="menu.html" class="btn-order-details">
-                                            <span>Pedir novamente</span>
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="orders-list" id="orders-list"></div>
                         </div>
                     </section>
                 </div>
@@ -210,5 +242,8 @@
 
         <div id="footer-container"></div>
         <script src="assets/javascript/components.js"></script>
+        <script src="assets/javascript/session.js"></script>
+        <script src="assets/javascript/cart.js"></script>
+        <script src="assets/javascript/usuario.js"></script>
     </body>
 </html>
