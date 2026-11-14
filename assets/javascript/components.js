@@ -4,7 +4,7 @@ async function load_components() {
   let template_footer = await (await fetch("assets/components/footer.html")).text();
   let template_nav = await (await fetch("assets/components/nav.html")).text();
   let template_login = await (await fetch("assets/components/login-modal.html")).text();
-  let cart_dialog = await (await fetch("assets/components/cart-dialong.html")).text();
+  let cart_dialog = await (await fetch("assets/components/cart-dialog.html")).text();
   footer.innerHTML = template_footer;
   nav.innerHTML = template_nav;
 

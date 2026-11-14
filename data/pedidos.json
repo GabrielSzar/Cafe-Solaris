@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "cliente_id": 1,
+    "entregador_id": null,
+    "data_pedido": "2026-11-13 23:51:12",
+    "status": "Recebido",
+    "observacoes": null,
+    "forma_pagamento": null,
+    "taxa_entrega": null
+  }
+]

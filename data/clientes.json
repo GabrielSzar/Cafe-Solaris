@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "nome": "ASDASDASD",
+    "email": "ASDASDASD@ASDASDASD.ASDASDASD",
+    "senha": "ASDASDASDASD",
+    "numero_telefone": "ASDASDASDADS",
+    "cpf": "ASDASDASDADS",
+    "cep": "ASDASDASD",
+    "bairro": "ASDASDASD",
+    "rua": "ASDASDASDASD",
+    "numero": "ASDASDASDASD",
+    "complemento_endereco": "ASDASDASDASD"
+  }
+]
