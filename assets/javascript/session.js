@@ -1,7 +1,3 @@
-// Dados do site no localStorage (no lugar dos JSON de data/).
-// "clientes", "pedidos" e "itens_pedido" são listas.
-// "usuario" é quem está logado (sem a senha).
-
 function get_lista(chave) {
   return JSON.parse(localStorage.getItem(chave)) || [];
 }
@@ -27,7 +23,6 @@ function logout_usuario() {
   localStorage.removeItem("usuario");
 }
 
-// troca o botão Log In pelo ícone de usuário quando há login
 function atualizar_nav() {
   let area = document.getElementById("account-area");
   if (!area) {
@@ -41,7 +36,6 @@ function atualizar_nav() {
   }
 }
 
-// o modal de login existe em todas as páginas; o clique no formulário é tratado no document
 document.addEventListener("submit", (e) => {
   if (e.target.id !== "login-dialog-form") {
     return;
@@ -53,7 +47,7 @@ document.addEventListener("submit", (e) => {
   let senha = form.elements.password_login.value;
 
   let cliente = get_lista("clientes").find(
-    (c) => c.email === email && c.senha === senha
+    (c) => c.email === email && c.senha === senha,
   );
   if (!cliente) {
     alert("E-mail ou senha incorretos.");

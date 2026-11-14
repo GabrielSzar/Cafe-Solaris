@@ -1,6 +1,3 @@
-// Carrinho: fica no localStorage, preso ao id do cliente logado.
-// Só existe carrinho quando há usuário logado (session.js).
-
 function get_cart(usuario) {
   let cart = JSON.parse(localStorage.getItem("carrinho"));
   if (!cart || cart.id_usuario !== usuario.id) {
@@ -135,9 +132,6 @@ function comprar() {
   show_cart(get_cart(usuario));
   alert("Pedido realizado!");
 }
-
-// botões do nav e do dialog existem depois que components.js carrega,
-// então o clique é tratado no document
 document.addEventListener("click", (e) => {
   if (e.target.closest("#cart-btn")) {
     open_cart();

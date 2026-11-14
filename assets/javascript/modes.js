@@ -1,5 +1,3 @@
-// Gerenciamento de tema (Dark / Light Mode) com persistência em localStorage
-
 function apply_theme() {
   const theme = localStorage.getItem("theme");
   if (theme === "dark") {
@@ -33,7 +31,6 @@ function update_toggle_icon() {
   }
 }
 
-// Aplica o tema assim que o body estiver disponível
 if (document.body) {
   apply_theme();
 } else {
@@ -44,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
   apply_theme();
 });
 
-// Event delegation para o botão de alternar tema na navbar
 document.addEventListener("click", (e) => {
   const btn = e.target.closest("#toggle-modes");
   if (btn) {

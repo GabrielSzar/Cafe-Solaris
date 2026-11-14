@@ -1,5 +1,3 @@
-// Página do cliente: mostra os dados do usuário logado (localStorage)
-
 addEventListener("DOMContentLoaded", () => {
   let usuario = get_usuario();
   if (!usuario) {
@@ -30,13 +28,19 @@ async function mostrar_pedidos(usuario) {
     return;
   }
 
+  let order_card_template = await (
+    await fetch("assets/components/order-card.html")
+  ).text();
   let produtos = await (await fetch("data/produtos.json")).json();
   let itens = get_lista("itens_pedido");
   list.innerHTML = "";
 
   for (let pedido of pedidos) {
     let do_pedido = itens.filter((i) => i.pedido_id === pedido.id);
-    let total = do_pedido.reduce((soma, i) => soma + i.qtd * i.preco_unitario, 0);
+    let total = do_pedido.reduce(
+      (soma, i) => soma + i.qtd * i.preco_unitario,
+      0,
+    );
     let linhas = do_pedido
       .map((i) => {
         let produto = produtos.find((p) => p.id === i.produto_id);
@@ -45,36 +49,33 @@ async function mostrar_pedidos(usuario) {
       })
       .join("<br>");
 
-    let card = document.createElement("div");
-    card.className = "order-item-card";
-    card.innerHTML = `
-      <div class="order-info-col">
-        <div class="order-header-line">
-          <span class="order-code">Pedido #${String(pedido.id).padStart(4, "0")}</span>
-          <span class="order-status-tag ${pedido.status === "Recebido" ? "status-received" : ""}">
-            <i class="fa-solid fa-clock"></i>
-            ${pedido.status}
-          </span>
-        </div>
-        <span class="order-date">
-          <i class="fa-regular fa-calendar"></i>
-          ${formatar_data(pedido.data_pedido)}
-        </span>
-        <p class="order-description">${linhas}</p>
-      </div>
-      <div class="order-price-col">
-        <span class="order-total-label">Total do Pedido</span>
-        <span class="order-total-value">${formatar_preco(total)}</span>
-        <a href="menu.html" class="btn-order-details">
-          <span>Pedir novamente</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-      </div>`;
+    let card_element = document.createElement("div");
+    card_element.innerHTML = order_card_template;
+    let card = card_element.firstElementChild;
+
+    card.querySelector(".order-code").textContent = `Pedido #${String(
+      pedido.id,
+    ).padStart(4, "0")}`;
+
+    let status_tag = card.querySelector(".order-status-tag");
+    if (pedido.status === "Recebido") {
+      status_tag.classList.add("status-received");
+    }
+    status_tag.innerHTML = `<i class="fa-solid fa-clock"></i> ${pedido.status}`;
+
+    card.querySelector(".order-date").innerHTML =
+      `<i class="fa-regular fa-calendar"></i> ${formatar_data(
+        pedido.data_pedido,
+      )}`;
+
+    card.querySelector(".order-description").innerHTML = linhas;
+    card.querySelector(".order-total-value").textContent =
+      formatar_preco(total);
+
     list.appendChild(card);
   }
 }
 
-// "2026-11-09 20:13:00" -> "09/11/2026 às 20:13"
 function formatar_data(data) {
   let [dia, hora] = data.split(" ");
   let [ano, mes, d] = dia.split("-");

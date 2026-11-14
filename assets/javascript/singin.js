@@ -9,11 +9,8 @@ addEventListener("DOMContentLoaded", () => {
       dados[campo] = dados[campo].trim();
     }
 
-    // a tabela clientes tem UNIQUE em email e cpf
     let clientes = get_lista("clientes");
-    if (
-      clientes.some((c) => c.email === dados.email || c.cpf === dados.cpf)
-    ) {
+    if (clientes.some((c) => c.email === dados.email || c.cpf === dados.cpf)) {
       alert("Já existe uma conta com este e-mail ou CPF.");
       return;
     }
