@@ -16,7 +16,7 @@ body.dark {
     --secondary: #d9d0c1;
     --tertiary: #736b02;
 }
-body:has(dialog[open]) {
+body:has(dialog[open]:modal) {
     overflow: hidden;
     scrollbar-gutter: stable;
 }

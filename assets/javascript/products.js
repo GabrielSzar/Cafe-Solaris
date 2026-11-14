@@ -5,20 +5,19 @@ const currency_formatter = new Intl.NumberFormat("pt-BR", {
 
 let products = [];
 let categories = [];
+let ismenu = false;
 
 async function render_products(products_list) {
   let grid = document.getElementById("products-grid");
   if (!grid) {
     return;
   }
-
-  let card = await (await fetch("assets/components/product-card.html")).text();
-  grid.innerHTML = "";
-
   if (products_list.length === 0) {
     grid.innerHTML = "<p>Nenhum produto encontrado.</p>";
     return;
   }
+  let card = await (await fetch("assets/components/product-card.html")).text();
+  grid.innerHTML = "";
 
   for (let i = 0; i < products_list.length; i++) {
     let product = products_list[i];
@@ -26,13 +25,22 @@ async function render_products(products_list) {
     card_element.innerHTML = card;
 
     let formatted_id = String(product.id).padStart(3, "0");
-    card_element.querySelector("img").src = `assets/img/products/${formatted_id}.webp`;
+    card_element.querySelector("img").src =
+      `assets/img/products/${formatted_id}.webp`;
     card_element.querySelector(".product-name").innerHTML = product.nome;
     card_element.querySelector(".tag").innerHTML = product.categoria;
-    card_element.querySelector(".product-card-price").innerHTML = currency_formatter.format(
-      Number(product.preco)
-    );
-
+    card_element.querySelector(".product-card-price").innerHTML =
+      currency_formatter.format(Number(product.preco));
+    let btn = card_element.querySelector(".btn-primary");
+    btn.dataset.product = product.nome;
+    if (ismenu) {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        add_to_cart(product);
+      });
+      btn.style.fontSize = "1.2rem";
+      btn.innerHTML = "Adicionar ao carrinho";
+    }
     grid.appendChild(card_element);
   }
 }
@@ -54,7 +62,9 @@ function filter_products(category, search) {
     if (search && search.trim() !== "") {
       let term = search.toLowerCase().trim();
       let name = product.nome.toLowerCase();
-      let description = product.descricao ? product.descricao.toLowerCase() : "";
+      let description = product.descricao
+        ? product.descricao.toLowerCase()
+        : "";
 
       if (!name.includes(term) && !description.includes(term)) {
         matches_search = false;
@@ -75,7 +85,8 @@ function update_title(category, search) {
     return;
   }
 
-  let has_category = category && category !== "no-filter" && category !== "todos";
+  let has_category =
+    category && category !== "no-filter" && category !== "todos";
   let has_search = search && search.trim() !== "";
 
   if (has_category && has_search) {
@@ -123,7 +134,8 @@ async function put_categories() {
     let formatted_id = String(categories[i].id).padStart(3, "0");
     card_element.querySelector(".category-img").src =
       `assets/img/products/${formatted_id}.webp`;
-    card_element.querySelector(".category-name").innerHTML = categories[i].categoria;
+    card_element.querySelector(".category-name").innerHTML =
+      categories[i].categoria;
 
     let btn = card_element.querySelector("button");
     btn.addEventListener("click", async () => {
@@ -151,7 +163,7 @@ async function put_categories() {
   }
 }
 
-async function apply_url_filters() {
+async function apply_url_filters(ismenu) {
   let params = new URLSearchParams(window.location.search);
   let category = params.get("categoria");
   let search = params.get("busca");
@@ -167,5 +179,5 @@ async function apply_url_filters() {
 
   update_title(category, search);
   let filtered_products = filter_products(category, search);
-  await render_products(filtered_products);
+  await render_products(filtered_products, ismenu);
 }

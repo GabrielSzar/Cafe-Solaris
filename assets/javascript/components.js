@@ -4,10 +4,12 @@ async function load_components() {
   let template_footer = await (await fetch("assets/components/footer.html")).text();
   let template_nav = await (await fetch("assets/components/nav.html")).text();
   let template_login = await (await fetch("assets/components/login-modal.html")).text();
+  let cart_dialog = await (await fetch("assets/components/cart-dialong.html")).text();
   footer.innerHTML = template_footer;
   nav.innerHTML = template_nav;
-  document.body.insertAdjacentHTML("beforeend", template_login);
 
+  document.body.insertAdjacentHTML("beforeend", template_login);
+  document.body.insertAdjacentHTML("beforeend", cart_dialog);
   let params = new URLSearchParams(window.location.search);
   let search = params.get("busca");
   if (search) {
