@@ -1,7 +1,9 @@
 <nav class="header-nav">
     <div id="left-header-nav">
-        <div class="logo"></div>
-        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="index.html" class="nav-brand-logo" aria-label="Café Solaris Início">
+            <div class="logo"></div>
+        </a>
+        <a href="menu.html" class="nav-link desktop-menu-link">Menu</a>
     </div>
     <div id="center-header-nav">
         <a href="index.html" class="logo-title">Cafe Solaris</a>
@@ -9,10 +11,13 @@
     <div id="right-header-nav">
         <form action="menu.html" method="GET" id="nav-search">
             <input type="text" name="busca" placeholder="Procure no menu" />
-            <button type="submit" class="nav-search-btn">
+            <button type="submit" class="nav-search-btn" aria-label="Pesquisar">
                 <i class="fa-solid fa-magnifying-glass nav-search-i"></i>
             </button>
         </form>
+        <a href="menu.html" class="nav-link mobile-menu-link">
+            <i class="fa-solid fa-book-open"></i> Cardápio
+        </a>
         <div id="account-area">
             <button
                 command="show-modal"
@@ -22,9 +27,14 @@
                 Log In
             </button>
         </div>
-        <button id="cart-btn" class="nav-link nav-btn">Carrinho</button>
-        <button class="nav-link nav-btn" id="toggle-modes">
+        <button id="cart-btn" class="nav-link nav-btn">
+            <i class="fa-solid fa-cart-shopping"></i> <span>Carrinho</span>
+        </button>
+        <button class="nav-link nav-btn" id="toggle-modes" aria-label="Alternar modo escuro">
             <i class="fa-solid fa-moon"></i>
         </button>
     </div>
+    <button id="nav-toggle-btn" class="nav-toggle-btn" aria-label="Abrir menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 </nav>

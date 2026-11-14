@@ -29,6 +29,54 @@ async function load_components() {
     }
   }
 }
+
 addEventListener("DOMContentLoaded", async (e) => {
   await load_components();
+});
+
+document.addEventListener("click", (e) => {
+  const toggleBtn = e.target.closest("#nav-toggle-btn");
+  if (toggleBtn) {
+    const nav = document.querySelector(".header-nav");
+    if (nav) {
+      nav.classList.toggle("nav-open");
+      const isOpen = nav.classList.contains("nav-open");
+      toggleBtn.setAttribute("aria-expanded", String(isOpen));
+      toggleBtn.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    }
+    return;
+  }
+
+  const nav = document.querySelector(".header-nav");
+  if (nav && nav.classList.contains("nav-open")) {
+    if (
+      !nav.contains(e.target) ||
+      e.target.closest(".mobile-menu-link") ||
+      e.target.closest("#account-area a") ||
+      e.target.closest("#account-area button")
+    ) {
+      nav.classList.remove("nav-open");
+      const toggle = document.getElementById("nav-toggle-btn");
+      if (toggle) {
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }
+    }
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 860) {
+    const nav = document.querySelector(".header-nav");
+    if (nav && nav.classList.contains("nav-open")) {
+      nav.classList.remove("nav-open");
+      const toggle = document.getElementById("nav-toggle-btn");
+      if (toggle) {
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }
+    }
+  }
 });

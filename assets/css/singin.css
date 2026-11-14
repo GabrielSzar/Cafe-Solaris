@@ -14,6 +14,7 @@
     border: 1px solid var(--primary);
     border-radius: 12px;
     padding: 2.5rem 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
 .singin-header {
@@ -33,9 +34,10 @@
     border-radius: 50%;
     margin-bottom: 1rem;
 }
+
 .singin-header h2 {
     color: var(--text);
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     margin-bottom: 0.5rem;
     letter-spacing: 0.5px;
 }
@@ -43,6 +45,7 @@
 .singin-header p {
     color: var(--secondary);
     font-size: 1rem;
+    line-height: 1.4;
 }
 
 .singin-form {
@@ -50,10 +53,12 @@
     flex-direction: column;
     gap: 1.5rem;
 }
+
 .icon-title {
     color: var(--text);
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
+
 .form-section-title {
     display: flex;
     align-items: center;
@@ -61,15 +66,17 @@
     border-bottom: 1px solid var(--primary);
     padding-bottom: 0.5rem;
     margin-top: 0.5rem;
-    h3 {
-        color: var(--text);
-        font-size: 1.2rem;
-        font-weight: 700;
-    }
 }
+
+.form-section-title h3 {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
 .form-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
 }
 
@@ -77,28 +84,46 @@
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
-    label {
-        color: var(--text);
-        font-size: 0.95rem;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-        i {
-            color: var(--secondary);
-            font-size: 0.9rem;
-        }
-    }
-    input {
-        height: 44px;
-        background-color: rgba(13, 13, 13, 0.6);
-        color: var(--text);
-        border: 1px solid var(--secondary);
-        border-radius: 6px;
-        padding: 0 1rem;
-        font-size: 1rem;
-    }
 }
+
+.form-group.full-width,
+.form-group.span-2 {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.form-group label i {
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    height: 44px;
+    background-color: rgba(13, 13, 13, 0.6);
+    color: var(--text);
+    border: 1px solid var(--secondary);
+    border-radius: 6px;
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--tertiary);
+    box-shadow: 0 0 0 2px rgba(115, 107, 2, 0.2);
+}
+
 .form-actions {
     display: flex;
     flex-direction: column;
@@ -122,18 +147,29 @@
     gap: 0.6rem;
     transition:
         background-color 0.2s ease,
-        transform 0.1s ease;
+        transform 0.1s ease,
+        opacity 0.2s ease;
+}
+
+.submit-btn:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
 }
 
 .form-footer {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 0.5rem;
-    p {
-        color: var(--secondary);
-        font-size: 0.95rem;
-    }
+    text-align: center;
 }
+
+.form-footer p {
+    color: var(--secondary);
+    font-size: 0.95rem;
+}
+
 .login-link-btn {
     background: none;
     color: var(--text);
@@ -143,4 +179,33 @@
     padding: 0;
     cursor: pointer;
     transition: color 0.2s ease;
+}
+
+.login-link-btn:hover {
+    color: var(--tertiary);
+}
+
+@media (max-width: 640px) {
+    .singin-sec {
+        padding: 2rem 1rem;
+    }
+
+    .singin-container {
+        padding: 1.75rem 1.2rem;
+        border-radius: 8px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .form-group.full-width,
+    .form-group.span-2 {
+        grid-column: 1;
+    }
+
+    .submit-btn {
+        max-width: 100%;
+    }
 }

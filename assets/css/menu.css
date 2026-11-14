@@ -1,57 +1,178 @@
 #search {
-    padding: 4rem;
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
+
 #search-menu {
-    width: 80%;
+    width: 100%;
+    max-width: 640px;
     display: flex;
     justify-content: center;
-    input {
-        color: var(--text);
-        outline: none;
-        height: 56px;
-        width: 100%;
-        font-size: 1rem;
-        padding: 1rem;
-        background-color: var(--background);
-        border: solid 1px var(--secondary);
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-    }
-    button {
-        width: 128px;
-        background: var(--tertiary);
-        font-size: 1rem;
-        color: var(--text);
-    }
+    margin-top: 1.5rem;
 }
+
+#search-menu input {
+    color: var(--text);
+    outline: none;
+    height: 52px;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--background);
+    border: solid 1px var(--secondary);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-right: none;
+    transition: border-color 0.2s ease;
+}
+
+#search-menu input:focus {
+    border-color: var(--tertiary);
+}
+
+#search-menu button {
+    min-width: 120px;
+    height: 52px;
+    background: var(--tertiary);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    transition: opacity 0.2s ease;
+}
+
+#search-menu button:hover {
+    opacity: 0.9;
+}
+
 #categories {
     display: flex;
-    padding: 4rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 .category-nav {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     border: solid 1px var(--secondary);
     background-color: var(--background);
+    border-radius: 8px;
+    padding: 1rem;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    cursor: pointer;
 }
+
+.category-nav:hover {
+    transform: translateY(-4px);
+    border-color: var(--tertiary);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
 .category-img {
-    width: 128px;
-    height: 128px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
     background-color: #fff;
+    margin-bottom: 0.5rem;
 }
+
 .category-name {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
+    text-align: center;
     color: var(--text);
+    line-height: 1.25;
 }
+
 main {
     background-color: var(--secondary);
-    padding: 8rem;
+    padding: 4rem 2rem;
+    min-height: 50vh;
+}
+
+#search-h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    color: var(--background);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    #search {
+        padding: 2.5rem 1rem 1rem 1rem;
+    }
+
+    #categories {
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+    }
+
+    main {
+        padding: 2.5rem 1rem;
+    }
+}
+
+@media (max-width: 540px) {
+    #search-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #search-menu input {
+        border-right: solid 1px var(--secondary);
+        border-radius: 6px;
+        height: 46px;
+    }
+
+    #search-menu button {
+        border-radius: 6px;
+        height: 46px;
+        width: 100%;
+    }
+
+    #categories {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .category-nav {
+        width: 100%;
+        height: auto;
+        min-height: 140px;
+        padding: 0.8rem;
+    }
+
+    .category-img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .category-name {
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 360px) {
+    #categories {
+        grid-template-columns: 1fr;
+    }
 }
