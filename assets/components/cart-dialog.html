@@ -1,15 +1,16 @@
-<dialog id="cart-dialog">
-    <button command="close" commandfor="cart-dialog" class="exit-btn">
+<dialog id="cart-dialog" aria-labelledby="cart-titulo">
+    <button type="button" class="exit-btn" data-close-dialog aria-label="Fechar">
         <i class="fa-solid fa-x"></i>
     </button>
     <div id="cart-dialog-header">
         <div class="logo"></div>
-        <h2>Seu carrinho</h2>
+        <h2 id="cart-titulo">Seu carrinho</h2>
     </div>
     <div id="cart-items"></div>
     <div id="cart-total">
         <h3>Total</h3>
         <h3 id="cart-total-price">R$ 0,00</h3>
     </div>
-    <button id="cart-buy" disabled>Comprar</button>
+    <button type="button" id="cart-buy" disabled>Comprar</button>
+    <a href="carrinho.html" class="cart-dialog-link">Ver carrinho completo</a>
 </dialog>

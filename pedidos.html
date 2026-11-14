@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/global.css" />
+        <link rel="stylesheet" href="assets/css/usuario.css" />
+        <link rel="icon" type="image/svg+xml" href="assets/img/coffe-planet.svg" />
+        <script
+            src="https://kit.fontawesome.com/f112726c5a.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Café Solaris - Meus pedidos</title>
+    </head>
+    <body>
+        <div id="nav-container"></div>
+
+        <main class="usuario-sec">
+            <div class="usuario-container">
+                <header class="usuario-header">
+                    <div class="usuario-header-title">
+                        <span class="tag">Área do cliente</span>
+                        <h1 class="usuario-title">Meus pedidos</h1>
+                        <p>Acompanhe o status dos pedidos que você já fez</p>
+                    </div>
+                    <a href="usuario.html" class="btn-outline">
+                        <i class="fa-solid fa-arrow-left"></i> Minha conta
+                    </a>
+                </header>
+
+                <div id="pedidos-aviso" class="usuario-card" hidden></div>
+
+                <div class="usuario-card" id="pedidos-card">
+                    <div class="card-section-title">
+                        <i class="fa-solid fa-clock-rotate-left icon-title"></i>
+                        <div>
+                            <h3>Pedidos realizados</h3>
+                            <p>Os pedidos mais recentes aparecem primeiro</p>
+                        </div>
+                    </div>
+                    <div class="orders-list" id="orders-list"></div>
+                </div>
+            </div>
+        </main>
+
+        <div id="footer-container"></div>
+        <script src="assets/javascript/components.js"></script>
+        <script src="assets/javascript/session.js"></script>
+        <script src="assets/javascript/cart.js"></script>
+        <script src="assets/javascript/pedidos.js"></script>
+        <script src="assets/javascript/modes.js"></script>
+    </body>
+</html>

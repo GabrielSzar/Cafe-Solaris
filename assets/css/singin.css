@@ -1,34 +1,31 @@
 .singin-sec {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 3rem 1.5rem;
+    align-items: flex-start;
+    padding: 3rem 1.25rem 4rem;
     min-height: calc(100vh - 160px);
     background-color: var(--background);
 }
-
 .singin-container {
     width: 100%;
-    max-width: 760px;
-    background-color: var(--background);
+    max-width: 820px;
+    background-color: var(--surface);
     border: 1px solid var(--primary);
     border-radius: 12px;
     padding: 2.5rem 2rem;
 }
-
 .singin-header {
     text-align: center;
     margin-bottom: 2rem;
 }
-
 .singin-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 60px;
     height: 60px;
-    background-color: var(--primary);
-    color: var(--text);
+    background-color: var(--tertiary);
+    color: var(--on-accent);
     font-size: 1.8rem;
     border-radius: 50%;
     margin-bottom: 1rem;
@@ -39,12 +36,10 @@
     margin-bottom: 0.5rem;
     letter-spacing: 0.5px;
 }
-
 .singin-header p {
-    color: var(--secondary);
+    color: var(--muted);
     font-size: 1rem;
 }
-
 .singin-form {
     display: flex;
     flex-direction: column;
@@ -61,43 +56,46 @@
     border-bottom: 1px solid var(--primary);
     padding-bottom: 0.5rem;
     margin-top: 0.5rem;
-    h3 {
-        color: var(--text);
-        font-size: 1.2rem;
-        font-weight: 700;
-    }
+}
+.form-section-title h3 {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 .form-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1.2rem;
 }
-
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
-    label {
-        color: var(--text);
-        font-size: 0.95rem;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-        i {
-            color: var(--secondary);
-            font-size: 0.9rem;
-        }
-    }
-    input {
-        height: 44px;
-        background-color: rgba(13, 13, 13, 0.6);
-        color: var(--text);
-        border: 1px solid var(--secondary);
-        border-radius: 6px;
-        padding: 0 1rem;
-        font-size: 1rem;
-    }
+}
+.form-group label {
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.form-group label i {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+.form-group input {
+    height: 44px;
+    background-color: var(--input-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+.form-group input::placeholder {
+    color: var(--muted);
+    opacity: 0.8;
 }
 .form-actions {
     display: flex;
@@ -106,13 +104,12 @@
     gap: 1.2rem;
     margin-top: 1rem;
 }
-
 .submit-btn {
     width: 100%;
     max-width: 320px;
     height: 48px;
     background-color: var(--tertiary);
-    color: var(--text);
+    color: var(--on-accent);
     font-size: 1.1rem;
     font-weight: 700;
     border-radius: 6px;
@@ -121,18 +118,22 @@
     justify-content: center;
     gap: 0.6rem;
     transition:
-        background-color 0.2s ease,
+        filter 0.2s ease,
         transform 0.1s ease;
 }
-
+.submit-btn:hover {
+    filter: brightness(1.08);
+}
 .form-footer {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 0.5rem;
-    p {
-        color: var(--secondary);
-        font-size: 0.95rem;
-    }
+}
+.form-footer p {
+    color: var(--muted);
+    font-size: 0.95rem;
 }
 .login-link-btn {
     background: none;
@@ -142,5 +143,30 @@
     text-decoration: underline;
     padding: 0;
     cursor: pointer;
-    transition: color 0.2s ease;
+}
+
+/* Desktop: dois campos por linha */
+@media (min-width: 681px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .form-group.full-width,
+    .form-group.span-2 {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 680px) {
+    .singin-sec {
+        padding: 2rem 0.75rem 3rem;
+    }
+    .singin-container {
+        padding: 1.75rem 1.1rem;
+    }
+    .singin-header h2 {
+        font-size: 1.6rem;
+    }
+    .icon-title {
+        font-size: 1.6rem;
+    }
 }

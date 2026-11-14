@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="assets/css/global.css" />
         <link rel="stylesheet" href="assets/css/singin.css" />
-        <link rel="icon" type="image/png" href="assets/img/coffe-planet.svg" />
+        <link rel="icon" type="image/svg+xml" href="assets/img/coffe-planet.svg" />
         <script
             src="https://kit.fontawesome.com/f112726c5a.js"
             crossorigin="anonymous"
         ></script>
-        <title>Café Solaris</title>
+        <title>Café Solaris - Criar conta</title>
     </head>
     <body>
         <div id="nav-container"></div>
@@ -20,28 +20,29 @@
                     <div class="singin-icon">
                         <i class="fa-solid fa-user-plus"></i>
                     </div>
-                    <h2>Crie sua Conta</h2>
+                    <h2>Crie sua conta</h2>
                     <p>
                         Preencha os seus dados abaixo para se cadastrar no Café
                         Solaris
                     </p>
                 </div>
 
-                <form class="singin-form">
+                <form class="singin-form" novalidate>
                     <div class="form-section-title">
                         <i class="fa-solid fa-id-card icon-title"></i>
-                        <h3>Dados Pessoais</h3>
+                        <h3>Dados pessoais</h3>
                     </div>
                     <div class="form-grid">
                         <div class="form-group full-width">
                             <label for="nome">
-                                <i class="fa-solid fa-user"></i> Nome Completo
+                                <i class="fa-solid fa-user"></i> Nome completo
                             </label>
                             <input
                                 type="text"
                                 id="nome"
                                 name="nome"
                                 placeholder="Digite seu nome completo"
+                                autocomplete="name"
                                 required
                                 maxlength="50"
                             />
@@ -56,10 +57,12 @@
                                 id="email"
                                 name="email"
                                 placeholder="seuEmail@exemplo.com"
+                                autocomplete="email"
                                 required
                                 maxlength="100"
                             />
                         </div>
+
                         <div class="form-group">
                             <label for="senha">
                                 <i class="fa-solid fa-lock"></i> Senha
@@ -68,23 +71,28 @@
                                 type="password"
                                 id="senha"
                                 name="senha"
-                                placeholder="No minimo seis caracteres"
+                                placeholder="No mínimo seis caracteres"
+                                autocomplete="new-password"
                                 required
-                                maxlength="100"
+                                minlength="6"
+                                maxlength="50"
                             />
                         </div>
+
                         <div class="form-group">
                             <label for="numero_telefone">
-                                <i class="fa-solid fa-phone"></i> Telefone /
-                                Celular
+                                <i class="fa-solid fa-phone"></i> Telefone / Celular
                             </label>
                             <input
                                 type="tel"
+                                inputmode="numeric"
                                 id="numero_telefone"
                                 name="numero_telefone"
                                 placeholder="(00) 00000-0000"
+                                autocomplete="tel"
+                                data-mask="telefone"
                                 required
-                                maxlength="20"
+                                maxlength="15"
                             />
                         </div>
 
@@ -98,6 +106,7 @@
                                 id="cpf"
                                 name="cpf"
                                 placeholder="000.000.000-00"
+                                data-mask="cpf"
                                 required
                                 maxlength="14"
                             />
@@ -106,7 +115,7 @@
 
                     <div class="form-section-title">
                         <i class="fa-solid fa-location-dot icon-title"></i>
-                        <h3>Endereço de Entrega</h3>
+                        <h3>Endereço de entrega</h3>
                     </div>
                     <div class="form-grid">
                         <div class="form-group">
@@ -119,8 +128,10 @@
                                 id="cep"
                                 name="cep"
                                 placeholder="00000-000"
+                                autocomplete="postal-code"
+                                data-mask="cep"
                                 required
-                                maxlength="10"
+                                maxlength="9"
                             />
                         </div>
 
@@ -134,7 +145,7 @@
                                 name="bairro"
                                 placeholder="Seu bairro"
                                 required
-                                maxlength="100"
+                                maxlength="60"
                             />
                         </div>
 
@@ -147,8 +158,9 @@
                                 id="rua"
                                 name="rua"
                                 placeholder="Nome da rua ou avenida"
+                                autocomplete="address-line1"
                                 required
-                                maxlength="150"
+                                maxlength="100"
                             />
                         </div>
 
@@ -157,12 +169,14 @@
                                 <i class="fa-solid fa-house"></i> Número
                             </label>
                             <input
-                                type="number"
+                                type="text"
+                                inputmode="numeric"
                                 id="numero"
                                 name="numero"
                                 placeholder="Ex: 123"
+                                data-apenas-numeros
                                 required
-                                maxlength="20"
+                                maxlength="6"
                             />
                         </div>
 
@@ -175,24 +189,23 @@
                                 id="complemento_endereco"
                                 name="complemento_endereco"
                                 placeholder="Apto, bloco, referência..."
-                                maxlength="100"
+                                maxlength="60"
                             />
                         </div>
                     </div>
 
                     <div class="form-actions">
                         <button type="submit" class="submit-btn">
-                            Concluir Cadastro
+                            Concluir cadastro
                         </button>
                         <div class="form-footer">
                             <p>Já possui uma conta?</p>
                             <button
                                 type="button"
-                                command="show-modal"
-                                commandfor="login-dialog"
                                 class="login-link-btn"
+                                data-open-dialog="login-dialog"
                             >
-                                Fazer Login
+                                Fazer login
                             </button>
                         </div>
                     </div>

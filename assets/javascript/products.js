@@ -6,6 +6,7 @@ const currency_formatter = new Intl.NumberFormat("pt-BR", {
 let products = [];
 let categories = [];
 let ismenu = false;
+let card_template = null;
 
 async function render_products(products_list) {
   let grid = document.getElementById("products-grid");
@@ -16,33 +17,44 @@ async function render_products(products_list) {
     grid.innerHTML = "<p>Nenhum produto encontrado.</p>";
     return;
   }
-  let card = await (await fetch("assets/components/product-card.html")).text();
-  grid.innerHTML = "";
 
-  for (let i = 0; i < products_list.length; i++) {
-    let product = products_list[i];
-    let card_element = document.createElement("div");
-    card_element.innerHTML = card;
-
-    let formatted_id = String(product.id).padStart(3, "0");
-    card_element.querySelector("img").src =
-      `assets/img/products/${formatted_id}.webp`;
-    card_element.querySelector(".product-name").innerHTML = product.nome;
-    card_element.querySelector(".tag").innerHTML = product.categoria;
-    card_element.querySelector(".product-card-price").innerHTML =
-      currency_formatter.format(Number(product.preco));
-    let btn = card_element.querySelector(".btn-primary");
-    btn.dataset.product = product.nome;
-    if (ismenu) {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        add_to_cart(product);
-      });
-      btn.style.fontSize = "1.2rem";
-      btn.innerHTML = "Adicionar ao carrinho";
-    }
-    grid.appendChild(card_element);
+  if (!card_template) {
+    card_template = await (await fetch("assets/components/product-card.html")).text();
   }
+
+  const fragment = document.createDocumentFragment();
+  for (const product of products_list) {
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = card_template;
+    const card = wrapper.querySelector(".product-card");
+
+    const formatted_id = String(product.id).padStart(3, "0");
+    const img = card.querySelector(".product-card-img");
+    img.src = `assets/img/products/${formatted_id}.webp`;
+    img.alt = product.nome;
+
+    card.querySelector(".tag").textContent = product.categoria;
+    card.querySelector(".product-name").textContent = product.nome;
+    card.querySelector(".product-desc").textContent = product.descricao || "";
+    card.querySelector(".product-card-price").textContent = currency_formatter.format(
+      Number(product.preco),
+    );
+
+    const btn = card.querySelector(".product-action");
+    if (ismenu) {
+      btn.textContent = "Adicionar ao carrinho";
+      btn.addEventListener("click", () => add_to_cart(product));
+    } else {
+      btn.textContent = "Ver produto";
+      btn.addEventListener("click", () => {
+        window.location.href = "menu.html?busca=" + encodeURIComponent(product.nome);
+      });
+    }
+
+    fragment.appendChild(card);
+  }
+
+  grid.replaceChildren(fragment);
 }
 
 function filter_products(category, search) {
@@ -62,9 +74,7 @@ function filter_products(category, search) {
     if (search && search.trim() !== "") {
       let term = search.toLowerCase().trim();
       let name = product.nome.toLowerCase();
-      let description = product.descricao
-        ? product.descricao.toLowerCase()
-        : "";
+      let description = product.descricao ? product.descricao.toLowerCase() : "";
 
       if (!name.includes(term) && !description.includes(term)) {
         matches_search = false;
@@ -85,8 +95,7 @@ function update_title(category, search) {
     return;
   }
 
-  let has_category =
-    category && category !== "no-filter" && category !== "todos";
+  let has_category = category && category !== "no-filter" && category !== "todos";
   let has_search = search && search.trim() !== "";
 
   if (has_category && has_search) {
@@ -117,9 +126,7 @@ async function get_categories() {
 }
 
 async function put_categories() {
-  let categories_card = await (
-    await fetch("assets/components/category-card.html")
-  ).text();
+  let categories_card = await (await fetch("assets/components/category-card.html")).text();
   let cat_nav = document.querySelector("#categories");
   if (!cat_nav) {
     return;
@@ -129,13 +136,11 @@ async function put_categories() {
   for (let i = 0; i < categories.length; i++) {
     let card_element = document.createElement("div");
     card_element.innerHTML = categories_card;
-    card_element.querySelector(".category-nav").dataset.category =
-      categories[i].categoria;
+    card_element.querySelector(".category-nav").dataset.category = categories[i].categoria;
     let formatted_id = String(categories[i].id).padStart(3, "0");
     card_element.querySelector(".category-img").src =
       `assets/img/products/${formatted_id}.webp`;
-    card_element.querySelector(".category-name").innerHTML =
-      categories[i].categoria;
+    card_element.querySelector(".category-name").textContent = categories[i].categoria;
 
     let btn = card_element.querySelector("button");
     btn.addEventListener("click", async () => {
@@ -151,19 +156,15 @@ async function put_categories() {
       let query_string = params.toString();
       let new_url = query_string ? "menu.html?" + query_string : "menu.html";
 
-      try {
-        window.history.pushState({}, "", new_url);
-        await apply_url_filters();
-      } catch (e) {
-        window.location.href = new_url;
-      }
+      window.history.pushState({}, "", new_url);
+      await apply_url_filters();
     });
 
     cat_nav.appendChild(card_element);
   }
 }
 
-async function apply_url_filters(ismenu) {
+async function apply_url_filters() {
   let params = new URLSearchParams(window.location.search);
   let category = params.get("categoria");
   let search = params.get("busca");
@@ -177,7 +178,11 @@ async function apply_url_filters(ismenu) {
     nav_input.value = search ? search : "";
   }
 
+  document.querySelectorAll(".category-nav").forEach((btn) => {
+    btn.setAttribute("aria-pressed", String(btn.dataset.category === category));
+  });
+
   update_title(category, search);
   let filtered_products = filter_products(category, search);
-  await render_products(filtered_products, ismenu);
+  await render_products(filtered_products);
 }

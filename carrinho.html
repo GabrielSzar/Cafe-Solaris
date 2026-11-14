@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/global.css" />
+        <link rel="stylesheet" href="assets/css/carrinho.css" />
+        <link rel="icon" type="image/svg+xml" href="assets/img/coffe-planet.svg" />
+        <script
+            src="https://kit.fontawesome.com/f112726c5a.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Café Solaris - Carrinho</title>
+    </head>
+    <body>
+        <div id="nav-container"></div>
+
+        <main class="carrinho-sec">
+            <div class="carrinho-container">
+                <header class="carrinho-header">
+                    <span class="tag">Compras</span>
+                    <h1>Seu carrinho</h1>
+                    <p>Revise os itens antes de finalizar o pedido</p>
+                </header>
+
+                <div id="carrinho-aviso" class="empty-card" hidden></div>
+
+                <div id="carrinho-grid" class="carrinho-grid">
+                    <section
+                        class="carrinho-lista"
+                        id="carrinho-itens"
+                        aria-live="polite"
+                    ></section>
+
+                    <aside class="carrinho-resumo">
+                        <h2>Resumo do pedido</h2>
+                        <div class="resumo-linha">
+                            <span>Itens</span>
+                            <span id="resumo-qtd">0</span>
+                        </div>
+                        <div class="resumo-linha resumo-total">
+                            <span>Total</span>
+                            <strong id="resumo-total">R$ 0,00</strong>
+                        </div>
+                        <button
+                            type="button"
+                            id="carrinho-comprar"
+                            class="btn-primary"
+                            disabled
+                        >
+                            Finalizar compra
+                        </button>
+                        <a href="menu.html" class="link-continuar">
+                            Continuar comprando
+                        </a>
+                    </aside>
+                </div>
+            </div>
+        </main>
+
+        <div id="footer-container"></div>
+        <script src="assets/javascript/components.js"></script>
+        <script src="assets/javascript/session.js"></script>
+        <script src="assets/javascript/cart.js"></script>
+        <script src="assets/javascript/carrinho.js"></script>
+        <script src="assets/javascript/modes.js"></script>
+    </body>
+</html>

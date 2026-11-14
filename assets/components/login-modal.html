@@ -1,18 +1,19 @@
-<dialog id="login-dialog">
-    <button command="close" commandfor="login-dialog" class="exit-btn">
+<dialog id="login-dialog" aria-labelledby="login-titulo">
+    <button type="button" class="exit-btn" data-close-dialog aria-label="Fechar">
         <i class="fa-solid fa-x"></i>
     </button>
     <div id="login-dialog-header">
         <div class="logo"></div>
-        <h2>Entrar na Café Solaris</h2>
+        <h2 id="login-titulo">Entrar na Café Solaris</h2>
     </div>
-    <form action="" id="login-dialog-form">
-        <h3>Email</h3>
+    <form id="login-dialog-form">
+        <h3>E-mail</h3>
         <input
             type="email"
             name="email_login"
             id="email_login"
             placeholder="seuEmail@exemplo.com"
+            autocomplete="email"
             required
         />
         <h3>Senha</h3>
@@ -21,18 +22,19 @@
             name="password_login"
             id="password_login"
             placeholder="••••••••"
+            autocomplete="current-password"
             required
         />
-        <button>Entrar</button>
+        <button type="submit">Entrar</button>
     </form>
     <div id="other-login">
-        <h3>outras formas de entrar</h3>
+        <h3>Outras formas de entrar</h3>
         <div class="login-method">
             <p>Entrar com o Google</p>
             <i class="fa-brands fa-google"></i>
         </div>
         <div class="login-method">
-            <p>Entrat com a Apple</p>
+            <p>Entrar com a Apple</p>
             <i class="fa-brands fa-apple"></i>
         </div>
     </div>

@@ -37,7 +37,7 @@
 }
 
 .usuario-header-title p {
-    color: var(--secondary);
+    color: var(--muted);
     font-size: 1rem;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .usuario-nav-box {
-    background-color: rgba(34, 18, 18, 0.85);
+    background-color: var(--surface);
     border: 1px solid var(--primary);
     border-radius: 8px;
     padding: 2rem 1.25rem 1.5rem 1.25rem;
@@ -74,7 +74,7 @@
     width: 88px;
     height: 88px;
     border-radius: 50%;
-    border: 2px solid var(--secondary);
+    border: 2px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +91,7 @@
 }
 
 .user-email {
-    color: var(--secondary);
+    color: var(--muted);
     font-size: 0.92rem;
     word-break: break-all;
 }
@@ -110,7 +110,7 @@
     gap: 0.8rem;
     padding: 0.8rem 1rem;
     border-radius: 6px;
-    color: var(--secondary);
+    color: var(--muted);
     font-size: 0.95rem;
     font-weight: 600;
     transition: all 0.2s ease;
@@ -120,13 +120,14 @@
     font-size: 1.05rem;
     width: 20px;
     text-align: center;
-    color: var(--secondary);
+    color: var(--muted);
     transition: color 0.2s ease;
 }
 
 .usuario-nav-item.active {
-    background-color: var(--primary);
+    background-color: var(--secondary);
     color: var(--text);
+    box-shadow: inset 3px 0 0 var(--tertiary);
 }
 
 .usuario-nav-item.active i {
@@ -134,14 +135,14 @@
 }
 
 .usuario-nav-item.logout-link {
-    color: #e57373;
-    border-top: 1px solid rgba(115, 86, 70, 0.35);
+    color: var(--danger);
+    border-top: 1px solid var(--border);
     margin-top: 0.5rem;
     padding-top: 0.9rem;
 }
 
 .usuario-nav-item.logout-link i {
-    color: #e57373;
+    color: var(--danger);
 }
 
 .usuario-main-content {
@@ -151,7 +152,7 @@
 }
 
 .usuario-card {
-    background-color: rgba(34, 18, 18, 0.85);
+    background-color: var(--surface);
     border: 1px solid var(--primary);
     border-radius: 8px;
     padding: 2.2rem 2rem;
@@ -179,7 +180,7 @@
 }
 
 .card-section-title p {
-    color: var(--secondary);
+    color: var(--muted);
     font-size: 0.88rem;
     margin-top: 0.2rem;
 }
@@ -191,7 +192,7 @@
 }
 
 .user-info-item {
-    background-color: rgba(13, 13, 13, 0.45);
+    background-color: var(--muted);
     border-radius: 4px;
     padding: 0.85rem 1.1rem;
     display: flex;
@@ -207,7 +208,7 @@
 }
 
 .user-info-label {
-    color: var(--secondary);
+    color: var(--muted);
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -218,7 +219,7 @@
 }
 
 .user-info-label i {
-    color: var(--secondary);
+    color: var(--muted);
     font-size: 0.85rem;
     width: 14px;
     text-align: center;
@@ -235,7 +236,7 @@
 .password-masked {
     letter-spacing: 3px;
     font-size: 1.25rem;
-    color: var(--secondary);
+    color: var(--muted);
 }
 
 .orders-list {
@@ -245,8 +246,8 @@
 }
 
 .order-item-card {
-    background-color: rgba(13, 13, 13, 0.45);
-    border: 1px solid var(--primary);
+    background-color: var(--muted);
+    border: 1px solid var(--border);
     border-radius: 4px;
     padding: 1.25rem 1.5rem;
     display: flex;
@@ -289,13 +290,13 @@
 }
 
 .status-received {
-    background-color: rgba(115, 107, 2, 0.25);
-    color: #e5db74;
+    background-color: color-mix(in srgb, var(--tertiary) 14%, transparent);
+    color: var(--tertiary);
     border: 1px solid var(--tertiary);
 }
 
 .order-date {
-    color: var(--secondary);
+    color: var(--muted);
     font-size: 0.85rem;
 }
 
@@ -314,7 +315,7 @@
 
 .order-total-label {
     font-size: 0.8rem;
-    color: var(--secondary);
+    color: var(--muted);
 }
 
 .order-total-value {
@@ -328,7 +329,7 @@
     align-items: center;
     gap: 0.45rem;
     background-color: var(--tertiary);
-    color: var(--text);
+    color: var(--on-accent);
     font-size: 0.88rem;
     font-weight: 700;
     padding: 0.45rem 0.9rem;
@@ -396,6 +397,16 @@
         align-items: flex-start;
         width: 100%;
         padding-top: 0.8rem;
-        border-top: 1px dashed rgba(115, 86, 70, 0.4);
+        border-top: 1px dashed var(--border);
+    }
+}
+
+/* ===== Responsivo extra ===== */
+@media (max-width: 680px) {
+    .usuario-title {
+        font-size: 1.9rem;
+    }
+    .usuario-nav-item {
+        font-size: 0.9rem;
     }
 }
