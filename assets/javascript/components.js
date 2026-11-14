@@ -1,13 +1,22 @@
 async function load_components() {
   let footer = document.getElementById("footer-container");
   let nav = document.getElementById("nav-container");
-  let template_footer = await (await fetch("assets/components/footer.html")).text();
+  let template_footer = await (
+    await fetch("assets/components/footer.html")
+  ).text();
   let template_nav = await (await fetch("assets/components/nav.html")).text();
-  let template_login = await (await fetch("assets/components/login-modal.html")).text();
-  let cart_dialog = await (await fetch("assets/components/cart-dialog.html")).text();
+  let template_login = await (
+    await fetch("assets/components/login-modal.html")
+  ).text();
+  let cart_dialog = await (
+    await fetch("assets/components/cart-dialog.html")
+  ).text();
   footer.innerHTML = template_footer;
   nav.innerHTML = template_nav;
   atualizar_nav();
+  if (typeof update_toggle_icon === "function") {
+    update_toggle_icon();
+  }
 
   document.body.insertAdjacentHTML("beforeend", template_login);
   document.body.insertAdjacentHTML("beforeend", cart_dialog);
@@ -20,6 +29,6 @@ async function load_components() {
     }
   }
 }
-addEventListener("DOMContentLoaded", async (e) =>  {
+addEventListener("DOMContentLoaded", async (e) => {
   await load_components();
 });

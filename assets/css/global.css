@@ -10,11 +10,89 @@
     --font-logo: "Norwester", sans-serif;
 }
 body.dark {
-    --text: #f2edd5;
-    --background: #0d0d0d;
-    --primary: #735646;
-    --secondary: #d9d0c1;
-    --tertiary: #736b02;
+    --text: #f5f5f7;
+    --background: #100f0f;
+    --primary: #8c6b58;
+    --secondary: #242223;
+    --tertiary: #b8ad28;
+}
+
+body.dark p {
+    color: #cbbdb5;
+}
+
+body.dark .invert-color {
+    color: var(--text) !important;
+}
+
+body.dark .btn-primary {
+    background-color: var(--tertiary);
+    color: #100f0f;
+}
+
+body.dark .trust-i,
+body.dark .how-works-i {
+    background-color: #2e2928;
+    color: var(--tertiary);
+}
+
+body.dark .how-works-item {
+    border-color: #383230;
+    background-color: #1a1818;
+}
+
+body.dark .product-card {
+    background-color: #161414;
+    border: 1px solid #363230;
+}
+
+body.dark .category-nav {
+    border-color: #363230;
+    background-color: #1a1818;
+}
+
+body.dark .CTA h1 {
+    color: var(--text);
+}
+
+body.dark .CTA .btn-cta {
+    background-color: var(--tertiary);
+    color: #100f0f;
+}
+
+body.dark .singin-container,
+body.dark .usuario-nav-box,
+body.dark .usuario-card {
+    background-color: rgba(24, 22, 23, 0.95);
+    border-color: var(--primary);
+}
+
+body.dark .singin-form input {
+    background-color: rgba(15, 14, 15, 0.8);
+    color: var(--text);
+    border-color: #443c39;
+}
+
+body.dark .user-info-item,
+body.dark .order-item-card {
+    background-color: rgba(15, 14, 15, 0.7);
+    border-color: #443c39;
+}
+
+body.dark .cart-item,
+body.dark .usuario-nav-item {
+    color: #cbbdb5;
+}
+
+body.dark .user-info-label,
+body.dark .user-info-label i {
+    color: #a49890;
+}
+
+body.dark #login-dialog,
+body.dark #cart-dialog {
+    background-color: #161414;
+    border-color: var(--primary);
 }
 body:has(dialog[open]:modal) {
     overflow: hidden;
