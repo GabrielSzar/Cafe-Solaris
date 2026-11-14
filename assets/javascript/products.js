@@ -29,6 +29,7 @@ async function render_products(products_list) {
       `assets/img/products/${formatted_id}.webp`;
     card_element.querySelector(".product-name").innerHTML = product.nome;
     card_element.querySelector(".tag").innerHTML = product.categoria;
+    card_element.querySelector(".product-disc").innerHTML = product.descricao;
     card_element.querySelector(".product-card-price").innerHTML =
       currency_formatter.format(Number(product.preco));
     let btn = card_element.querySelector(".btn-primary");
