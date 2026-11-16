@@ -1,64 +1,56 @@
 #search {
-    padding: 3rem 1.5rem 1.5rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     max-width: 900px;
     margin: 0 auto;
+    padding: 3rem 1.5rem 1.5rem;
+    text-align: center;
 }
 
 #search-menu {
-    width: 100%;
-    max-width: 640px;
     display: flex;
     justify-content: center;
-    margin-top: 1.5rem;
-}
-
-#search-menu input {
-    color: var(--text);
-    outline: none;
-    height: 52px;
     width: 100%;
-    font-size: 1rem;
-    padding: 0.8rem 1.2rem;
-    background-color: var(--background);
-    border: solid 1px var(--secondary);
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border-right: none;
-    transition: border-color 0.2s ease;
-}
+    max-width: 640px;
+    margin-top: 1.5rem;
 
-#search-menu input:focus {
-    border-color: var(--tertiary);
-}
-
-#search-menu button {
-    min-width: 120px;
-    height: 52px;
-    background: var(--tertiary);
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--text);
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    transition: opacity 0.2s ease;
-}
-
-#search-menu button:hover {
-    opacity: 0.9;
+    input {
+        width: 100%;
+        height: 52px;
+        padding: 0.8rem 1.2rem;
+        border: 1px solid var(--secondary);
+        border-right: none;
+        border-radius: 6px 0 0 6px;
+        background-color: var(--background);
+        color: var(--text);
+        font-size: 1rem;
+        outline: none;
+        transition: all 0.2s;
+    }
+    input:focus {
+        border-color: var(--tertiary);
+    }
+    .btn {
+        min-width: 120px;
+        height: 52px;
+        border-radius: 0 6px 6px 0;
+        font-size: 1rem;
+        transition: all 0.2s;
+    }
+    .btn:hover {
+        opacity: 0.9;
+    }
 }
 
 #categories {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    padding: 2.5rem 1.5rem;
     justify-content: center;
+    gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2.5rem 1.5rem;
 }
 
 .category-nav {
@@ -68,15 +60,11 @@
     justify-content: center;
     width: 160px;
     height: 160px;
-    border: solid 1px var(--secondary);
-    background-color: var(--background);
-    border-radius: 8px;
     padding: 1rem;
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-    cursor: pointer;
+    border: 1px solid var(--secondary);
+    border-radius: 8px;
+    background-color: var(--background);
+    transition: all 0.2s;
 }
 
 .category-nav:hover {
@@ -88,43 +76,39 @@
 .category-img {
     width: 80px;
     height: 80px;
-    object-fit: cover;
-    border-radius: 6px;
-    background-color: #fff;
     margin-bottom: 0.5rem;
+    border-radius: 6px;
 }
 
 .category-name {
     font-size: 0.95rem;
+    line-height: 1.25;
     text-align: center;
     color: var(--text);
-    line-height: 1.25;
 }
 
 main {
-    background-color: var(--secondary);
-    padding: 4rem 2rem;
     min-height: 50vh;
+    padding: 4rem 2rem;
+    background-color: var(--secondary);
 }
 
 #search-h2 {
-    text-align: center;
     margin-bottom: 2rem;
     font-size: clamp(1.3rem, 3vw, 2rem);
-    color: var(--background);
     font-weight: 700;
+    text-align: center;
+    color: var(--background);
 }
 
 @media (max-width: 768px) {
     #search {
-        padding: 2.5rem 1rem 1rem 1rem;
+        padding: 2.5rem 1rem 1rem;
     }
-
     #categories {
         gap: 1rem;
         padding: 1.5rem 1rem;
     }
-
     main {
         padding: 2.5rem 1rem;
     }
@@ -134,38 +118,33 @@ main {
     #search-menu {
         flex-direction: column;
         gap: 0.5rem;
-    }
 
-    #search-menu input {
-        border-right: solid 1px var(--secondary);
-        border-radius: 6px;
-        height: 46px;
+        input {
+            height: 46px;
+            border-right: 1px solid var(--secondary);
+            border-radius: 6px;
+        }
+        .btn {
+            width: 100%;
+            height: 46px;
+            border-radius: 6px;
+        }
     }
-
-    #search-menu button {
-        border-radius: 6px;
-        height: 46px;
-        width: 100%;
-    }
-
     #categories {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0.75rem;
     }
-
     .category-nav {
         width: 100%;
         height: auto;
         min-height: 140px;
         padding: 0.8rem;
     }
-
     .category-img {
         width: 64px;
         height: 64px;
     }
-
     .category-name {
         font-size: 0.88rem;
     }

@@ -1,17 +1,21 @@
 .usuario-sec {
     display: flex;
     justify-content: center;
-    padding: 3rem 1.5rem 5rem 1.5rem;
     min-height: calc(100vh - 160px);
+    padding: 3rem 1.5rem 5rem;
     background-color: var(--background);
+}
+
+.usuario-container,
+.usuario-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .usuario-container {
     width: 100%;
     max-width: 1180px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
 }
 
 .usuario-header {
@@ -26,26 +30,25 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+
+    p {
+        font-size: 1rem;
+    }
 }
 
 .usuario-title {
-    color: var(--text);
-    font-family: var(--font-logo), var(--font);
+    font-family: "Norwester", sans-serif;
     font-size: 2.5rem;
-    text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-.usuario-header-title p {
-    color: var(--secondary);
-    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--text);
 }
 
 .usuario-grid {
     display: grid;
     grid-template-columns: 290px 1fr;
-    gap: 2rem;
     align-items: start;
+    gap: 2rem;
 }
 
 .usuario-sidebar {
@@ -53,14 +56,18 @@
     top: 2rem;
 }
 
-.usuario-nav-box {
-    background-color: rgba(34, 18, 18, 0.85);
+.usuario-nav-box,
+.usuario-card {
     border: 1px solid var(--primary);
     border-radius: 8px;
-    padding: 2rem 1.25rem 1.5rem 1.25rem;
+    background-color: var(--background);
+}
+
+.usuario-nav-box {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 2rem 1.25rem 1.5rem;
 }
 
 .user-profile-header {
@@ -71,27 +78,26 @@
 }
 
 .user-avatar {
-    width: 88px;
-    height: 88px;
-    border-radius: 50%;
-    border: 2px solid var(--secondary);
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 88px;
+    height: 88px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
     color: var(--text);
     font-size: 2.4rem;
-    margin-bottom: 1rem;
 }
 
 .user-name {
-    color: var(--text);
+    margin-bottom: 0.25rem;
     font-size: 1.35rem;
     font-weight: 700;
-    margin-bottom: 0.25rem;
+    color: var(--text);
 }
 
 .user-email {
-    color: var(--secondary);
     font-size: 0.92rem;
     word-break: break-all;
 }
@@ -110,50 +116,39 @@
     gap: 0.8rem;
     padding: 0.8rem 1rem;
     border-radius: 6px;
-    color: var(--secondary);
+    color: var(--text-muted);
     font-size: 0.95rem;
     font-weight: 600;
-    transition: all 0.2s ease;
-}
 
-.usuario-nav-item i {
-    font-size: 1.05rem;
-    width: 20px;
-    text-align: center;
-    color: var(--secondary);
-    transition: color 0.2s ease;
+    i {
+        width: 20px;
+        font-size: 1.05rem;
+        text-align: center;
+        color: var(--secondary);
+    }
 }
 
 .usuario-nav-item.active {
     background-color: var(--primary);
     color: var(--text);
-}
 
-.usuario-nav-item.active i {
-    color: var(--text);
+    i {
+        color: var(--text);
+    }
 }
 
 .usuario-nav-item.logout-link {
-    color: #e57373;
-    border-top: 1px solid rgba(115, 86, 70, 0.35);
     margin-top: 0.5rem;
     padding-top: 0.9rem;
-}
-
-.usuario-nav-item.logout-link i {
+    border-top: 1px solid rgba(115, 86, 70, 0.35);
     color: #e57373;
-}
 
-.usuario-main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    i {
+        color: #e57373;
+    }
 }
 
 .usuario-card {
-    background-color: rgba(34, 18, 18, 0.85);
-    border: 1px solid var(--primary);
-    border-radius: 8px;
     padding: 2.2rem 2rem;
     scroll-margin-top: 2rem;
 }
@@ -162,26 +157,23 @@
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    border-bottom: 1px solid var(--primary);
-    padding-bottom: 0.75rem;
     margin-bottom: 1.5rem;
-}
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--primary);
 
-.card-section-title .icon-title {
-    color: var(--text);
-    font-size: 1.8rem;
-}
-
-.card-section-title h3 {
-    color: var(--text);
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
-.card-section-title p {
-    color: var(--secondary);
-    font-size: 0.88rem;
-    margin-top: 0.2rem;
+    h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text);
+    }
+    p {
+        margin-top: 0.2rem;
+        font-size: 0.88rem;
+    }
+    .icon-title {
+        font-size: 1.8rem;
+        color: var(--text);
+    }
 }
 
 .user-info-grid {
@@ -190,16 +182,17 @@
     gap: 1.25rem;
 }
 
-.user-info-item {
+.user-info-item,
+.order-item-card {
     background-color: rgba(13, 13, 13, 0.45);
-    border-radius: 4px;
-    padding: 0.85rem 1.1rem;
+}
+
+.user-info-item {
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
-    transition:
-        border-color 0.2s ease,
-        background-color 0.2s ease;
+    padding: 0.85rem 1.1rem;
+    border-radius: 4px;
 }
 
 .user-info-item.full-width {
@@ -207,35 +200,33 @@
 }
 
 .user-info-label {
-    color: var(--secondary);
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
 
-.user-info-label i {
-    color: var(--secondary);
-    font-size: 0.85rem;
-    width: 14px;
-    text-align: center;
+    i {
+        width: 14px;
+        font-size: 0.85rem;
+        text-align: center;
+    }
 }
 
 .user-info-value {
-    color: var(--text);
     font-size: 1.05rem;
     font-weight: 600;
     letter-spacing: 0.2px;
     word-break: break-word;
+    color: var(--text);
 }
 
 .password-masked {
-    letter-spacing: 3px;
     font-size: 1.25rem;
-    color: var(--secondary);
+    letter-spacing: 3px;
 }
 
 .orders-list {
@@ -245,18 +236,14 @@
 }
 
 .order-item-card {
-    background-color: rgba(13, 13, 13, 0.45);
-    border: 1px solid var(--primary);
-    border-radius: 4px;
-    padding: 1.25rem 1.5rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     gap: 1.2rem;
-    transition:
-        border-color 0.2s ease,
-        background-color 0.2s ease;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 4px;
 }
 
 .order-info-col {
@@ -272,37 +259,42 @@
 }
 
 .order-code {
-    color: var(--text);
-    font-weight: 700;
     font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
 }
 
 .order-status-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
 }
 
 .status-received {
+    border: 1px solid var(--tertiary);
     background-color: rgba(115, 107, 2, 0.25);
     color: #e5db74;
-    border: 1px solid var(--tertiary);
+}
+
+.order-date,
+.order-total-label,
+.password-masked {
+    color: var(--secondary);
 }
 
 .order-date {
-    color: var(--secondary);
     font-size: 0.85rem;
 }
 
 .order-description {
-    color: var(--text);
-    font-size: 0.95rem;
     margin-top: 0.3rem;
+    font-size: 0.95rem;
+    color: var(--text);
 }
 
 .order-price-col {
@@ -314,84 +306,63 @@
 
 .order-total-label {
     font-size: 0.8rem;
-    color: var(--secondary);
 }
 
 .order-total-value {
-    color: var(--text);
     font-size: 1.3rem;
     font-weight: 700;
+    color: var(--text);
 }
 
 .btn-order-details {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 0.45rem;
-    background-color: var(--tertiary);
-    color: var(--text);
-    font-size: 0.88rem;
-    font-weight: 700;
     padding: 0.45rem 0.9rem;
-    border-radius: 4px;
-    transition:
-        background-color 0.2s ease,
-        transform 0.1s ease;
+    font-size: 0.88rem;
 }
 
 @media (max-width: 992px) {
     .usuario-grid {
         grid-template-columns: 1fr;
     }
-
     .usuario-sidebar {
         position: static;
     }
-
     .usuario-nav-menu {
         flex-direction: row;
         flex-wrap: wrap;
     }
-
     .usuario-nav-item {
         flex: 1 1 calc(50% - 0.5rem);
         justify-content: center;
     }
-
     .usuario-nav-item.logout-link {
-        border-top: none;
+        flex-basis: 100%;
         margin-top: 0;
         padding-top: 0.8rem;
-        flex-basis: 100%;
+        border-top: none;
     }
 }
 
 @media (max-width: 680px) {
     .usuario-sec {
-        padding: 2rem 1rem 4rem 1rem;
+        padding: 2rem 1rem 4rem;
     }
-
     .usuario-card {
         padding: 1.5rem 1.2rem;
     }
-
     .user-info-grid {
         grid-template-columns: 1fr;
     }
-
     .user-info-item.full-width {
         grid-column: 1;
     }
-
-    .usuario-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
+    .usuario-header,
     .order-item-card {
         flex-direction: column;
         align-items: flex-start;
     }
-
     .order-price-col {
         align-items: flex-start;
         width: 100%;
@@ -404,16 +375,13 @@
     .usuario-title {
         font-size: 1.8rem;
     }
-
     .usuario-nav-item {
         flex: 1 1 100%;
     }
-
     .order-header-line {
         flex-wrap: wrap;
         gap: 0.5rem;
     }
-
     .btn-order-details {
         width: 100%;
         justify-content: center;
